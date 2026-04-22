@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 07 - Abstract Classes</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 07</p>
+            <h1>Abstract Methods & Classes</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Abstraction</strong> means showing only what is needed and hiding the hard parts. An <strong>Abstract Class</strong> is like a plan or a map that is not yet a real building.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> When you use a TV remote, you only see the buttons (Change Channel, Volume). You don't need to see the complex wires and chips inside the TV to make it work.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: AbstractDemo.java
+abstract class Animal {
+    abstract void makeSound(); // No body here
+    
+    void sleep() {
+        System.out.println("Animal is sleeping...");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("The Dog says: Bark Bark!");
+    }
+}
+
+public class AbstractDemo {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.makeSound();
+        myDog.sleep();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Bark Bark!<br>
+                Sleeping...
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Design an abstract class <strong>Shape</strong> with an abstract method <code>calculateArea()</code>. Create subclasses <strong>Circle</strong> and <strong>Square</strong> that implement this method to calculate their respective areas.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab6.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab8.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 10 - User Authentication</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 10</p>
+            <h1>Registration, Login & Sessions</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Registration</strong> saves a new user. <strong>Login</strong> checks their password. <strong>Sessions</strong> help the server "remember" who you are so you don't have to log in on every page.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a hotel key card. You check-in at the desk (Login), they give you a key card (Session), and you can open your room door (Pages) any time.
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Auth & Session Code</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: auth.php</span></div>
+                    <pre><code>&lt;?php
+session_start();
+
+// 1. Registration
+if(isset($_POST['register'])) {
+  $user = $_POST['user'];
+  $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+  mysqli_query($conn, "INSERT INTO users VALUES('$user', '$pass')");
+}
+
+// 2. Login
+if(isset($_POST['login'])) {
+  $user = $_POST['user'];
+  $row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM users WHERE name='$user'"));
+  if(password_verify($_POST['pass'], $row['pass'])) {
+    $_SESSION['active_user'] = $user;
+    header("Location: home.php");
+  }
+}
+?&gt;</code></pre>
+                </div>
+                <div class="preview-panel" style="background: white; color: #1e293b; font-family: sans-serif;">
+                    <div class="panel-header"><span>Login Status</span></div>
+                    <div style="padding: 2rem; text-align: center;">
+                        <i class="fas fa-user-circle" style="font-size: 3rem; color: #6366f1;"></i>
+                        <h3 style="margin-top: 10px;">Welcome Back, Jigmat!</h3>
+                        <p style="color: #10b981; font-weight: bold;">Session Status: Active</p>
+                        <button style="background: #ef4444; color: white; border:none; padding: 5px 15px; border-radius: 5px; margin-top: 10px;">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Create a <strong>Logout</strong> page that uses <code>session_destroy()</code> to clear the user's session and redirect them to the login page.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab9.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab11.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

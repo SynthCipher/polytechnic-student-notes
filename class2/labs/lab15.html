@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15 - Employee Hierarchy</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 15</p>
+            <h1>Employee Management System</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>Base Class</strong> has things that are common for everyone. <strong>Sub Classes</strong> have their own special things. This is like a family tree.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> All "Employees" have a Name and Salary. But a "Software Engineer" writes code, while a "Manager" manages people. They both inherit from Employee.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: EmployeeDemo.java
+class Employee {
+    String name;
+    double salary;
+    void work() { System.out.println(name + " is working."); }
+}
+
+class Manager extends Employee {
+    void manage() { System.out.println(name + " is managing the team."); }
+}
+
+public class EmployeeDemo {
+    public static void main(String[] args) {
+        Manager m = new Manager();
+        m.name = "Alice";
+        m.salary = 75000;
+        
+        m.work();   // Inherited method
+        m.manage(); // Specific method
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Employee is working<br>
+                Manager is managing
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>In a software company, create an <strong>Employee</strong> base class. Extend it to create classes for: <code>Software Engineer</code>, <code>Sr. Software Engineer</code>, <code>Project Lead</code>, and <code>Director</code>. Each class should have specific properties for their roles and override a <code>getPerks()</code> method to return their specific benefits.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab14.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab16.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

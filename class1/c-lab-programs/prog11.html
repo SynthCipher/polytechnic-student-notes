@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 11: 1D Array | GPC LEH</title>
+    <link rel='icon' type='image/png' href='../../assets/logo1.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>List of <br><span style="color: var(--primary);">Items</span></h1>
+            <p class="subtitle">Practical 11: Storing multiple items in a single variable using arrays.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Definition</h3>
+            <p>An array is a collection of elements of the same data type stored in contiguous memory locations. A 1D array is accessed using a single index, starting from <strong>0</strong>. They are essential for handling lists of data (like marks of 50 students) efficiently without declaring 50 different variables.</p>
+        </div>
+
+        <div class="note-card" style="border-left-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+            <h3><i class="fas fa-lightbulb"></i> Real-Life Analogy</h3>
+            <p>An array is exactly like a row of lockers in your college. All lockers are the same size, but each locker has a unique number (Index) starting from 0. To get your books, you just need the locker number. Similarly, in C, you just need the Index number to get the data from the array.</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[3] = {10, 20, 30};
+    printf("Value at index 0: %d\n", arr[0]);
+    printf("Value at index 1: %d\n", arr[1]);
+    printf("Value at index 2: %d\n", arr[2]);
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Value at index 0: 10
+Value at index 1: 20
+Value at index 2: 30</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Create an array of 5 integers, take values from the user using a loop, and print the total sum of all elements.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC (Shortcut)</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Press <strong>F11</strong> to Compile and Run.</li>
+                </ul>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Press Alt + F9 then Ctrl + F9</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

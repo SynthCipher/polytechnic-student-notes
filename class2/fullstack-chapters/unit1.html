@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 1: Introduction to Web Development | GPC LEH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+    <style>
+        .study-guide-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .guide-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .guide-subtitle {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-text {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+        }
+
+        .viva-card {
+            background: var(--surface);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 4rem;
+        }
+
+        .viva-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .viva-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .viva-item:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--glass-border);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Overview</a>
+            <h1>Unit 1: <br><span style="color: var(--secondary);">Web Development Intro</span></h1>
+            <p class="subtitle">Complete Study Material with Live Interactive Examples</p>
+        </div>
+    </header>
+
+    <main class="section-container">
+        <!-- Table of Contents -->
+        <div class="study-guide-section"
+            style="padding: 1.5rem; margin-bottom: 2rem; background: rgba(99, 102, 241, 0.05);">
+            <h3 style="color: var(--secondary); margin-bottom: 0.75rem;"><i class="fas fa-list-ul"></i> Topics in this
+                Unit:</h3>
+            <ul style="display: flex; gap: 1.5rem; flex-wrap: wrap; list-style: none; padding: 0; font-weight: 500;">
+                <li><a href="#overview" style="color: var(--primary); text-decoration: none;">1.1 Overview</a></li>
+                <li><a href="#architecture" style="color: var(--primary); text-decoration: none;">1.2 Client-Server</a>
+                </li>
+                <li><a href="#layers" style="color: var(--primary); text-decoration: none;">1.3 App Development</a></li>
+                <li><a href="#responsive" style="color: var(--primary); text-decoration: none;">1.4 Responsive
+                        Design</a></li>
+
+            </ul>
+        </div>
+
+        <!-- 1.1 Overview -->
+        <div id="overview" class="study-guide-section">
+            <h1 class="guide-title">1.1 Overview of Web Technologies</h1>
+            <p class="content-text">Web development means creating websites and web applications that run in a web
+                browser. A website is made using different web technologies. The main technologies are:</p>
+            <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                <li>Web Browser</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <p class="content-text">These technologies work together to create a complete website.</p>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-globe"></i> What is a Web Browser?</h2>
+            <p class="content-text">A web browser is software used to open and view websites.</p>
+            <p class="content-text">Examples of web browsers: <strong>Google Chrome, Mozilla Firefox, Microsoft Edge,
+                    Safari, Opera</strong>.</p>
+            <p class="content-text">A browser reads HTML, CSS, and JavaScript and shows the webpage to the user.</p>
+            <div class="highlight-box">
+                <strong>Example:</strong> When you open <code>www.google.com</code>, the browser loads the webpage and
+                displays it.
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fab fa-html5"></i> HTML (HyperText Markup Language)</h2>
+            <p class="content-text">HTML is used to create the structure of a webpage. It tells the browser:</p>
+            <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                <li>What headings to show</li>
+                <li>Where to place images</li>
+                <li>How to create tables, forms, and paragraphs</li>
+            </ul>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>HTML Structure</span></div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif'><h1>Welcome</h1><p>This is my first webpage.</p></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fab fa-css3-alt"></i> CSS (Cascading Style Sheets)</h2>
+            <p class="content-text">CSS is used to design and style the webpage. It controls: Colors, Fonts, Borders,
+                Layout, Background. Without CSS, webpages look plain.</p>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>CSS Example</span></div>
+                    <pre><code>&lt;style&gt;
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: red;
+}
+&lt;/style&gt;
+&lt;h1&gt;Styled Heading&lt;/h1&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='background-color:lightblue; font-family:sans-serif'><h1 style='color:red'>Styled Heading</h1></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fab fa-js"></i> JavaScript</h2>
+            <p class="content-text">JavaScript is used to make webpages interactive. It can show alerts, change text,
+                validate forms, and respond to button clicks.</p>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>JavaScript Interaction</span></div>
+                    <pre><code>&lt;script&gt;
+function showMessage() {
+    alert("Hello Student");
+}
+&lt;/script&gt;
+
+&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='text-align:center; padding-top:40px; font-family:sans-serif;'><button id='js-btn' style='padding:12px 24px; background:#6366f1; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600;'>Click Me</button><script>document.getElementById('js-btn').addEventListener('click', function(){ alert('Hello Student'); });</script></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle">How They Work Together</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Creates structure</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Adds design</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Adds interaction</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="content-text"><strong>Example:</strong> A login page uses HTML for boxes, CSS for style, and JS to
+                check if fields are empty.</p>
+        </div>
+
+        <!-- 1.2 Architecture -->
+        <div id="architecture" class="study-guide-section">
+            <h1 class="guide-title">1.2 Client-Server Architecture</h1>
+            <p class="content-text">Web applications work using a client-server model.</p>
+
+            <h3 class="guide-subtitle">What is a Client?</h3>
+            <p class="content-text">The client is the user's device or browser (Mobile phone, Laptop, Desktop). The
+                client sends requests to the server.</p>
+
+            <h3 class="guide-subtitle">What is a Server?</h3>
+            <p class="content-text">The server is a computer that stores website files and sends them to users. It
+                processes requests and sends responses.</p>
+
+            <div class="highlight-box">
+                <strong>Example:</strong> When a user searches on Google, the browser sends a request to Google's
+                server, which processes it and sends results back.
+            </div>
+
+            <h3 class="guide-subtitle">The Working Process</h3>
+            <ol style="margin-left: 2rem; color: var(--text-muted); line-height: 2;">
+                <li>User opens website in browser</li>
+                <li>Browser sends request to server</li>
+                <li>Server finds the required page or data</li>
+                <li>Server sends response back</li>
+                <li>Browser displays the webpage</li>
+            </ol>
+
+            <h3 class="guide-subtitle">Diagram</h3>
+            <div
+                style="background: var(--surface); padding: 2rem; border-radius: 1rem; border: 1px dashed var(--primary); text-align: center; font-family: 'Fira Code', monospace; color: var(--primary);">
+                Client (Browser) ---- Request ----> Server<br>
+                Client (Browser) <--- Response ---- Server </div>
+
+                    <h3 class="guide-subtitle">Advantages</h3>
+                    <ul style="margin-left: 2rem; color: var(--text-muted);">
+                        <li>Easy to manage</li>
+                        <li>Data is stored in one place</li>
+                        <li>Multiple users can use the application</li>
+                        <li>Easy to update the website</li>
+                    </ul>
+            </div>
+
+            <!-- 1.3 Application Development -->
+            <div id="layers" class="study-guide-section">
+                <h1 class="guide-title">1.3 Application Development</h1>
+                <p class="content-text">Application development means creating a web application. A professional web app
+                    consists of three interconnected layers. Think of it as the <strong>Showroom, the Office, and the
+                        Warehouse</strong> of a business.</p>
+
+                <!-- Visual Flow Diagram -->
+                <div
+                    style="display: flex; justify-content: center; align-items: center; gap: 1rem; padding: 2rem; background: var(--surface); border-radius: 1rem; margin: 2rem 0; flex-wrap: wrap; text-align: center;">
+                    <div
+                        style="padding: 1.5rem; border: 1px solid var(--primary); border-radius: 1rem; min-width: 150px; background: rgba(99, 102, 241, 0.05);">
+                        <i class="fas fa-desktop"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;"></i><br>
+                        <strong>Frontend</strong><br><small>(The Interface)</small>
+                    </div>
+                    <div style="color: var(--primary); font-size: 1.5rem;"><i class="fas fa-arrows-alt-h"></i></div>
+                    <div
+                        style="padding: 1.5rem; border: 1px solid var(--secondary); border-radius: 1rem; min-width: 150px; background: rgba(244, 63, 94, 0.05);">
+                        <i class="fas fa-gears"
+                            style="font-size: 2rem; color: var(--secondary); margin-bottom: 0.5rem;"></i><br>
+                        <strong>Backend</strong><br><small>(The Logic)</small>
+                    </div>
+                    <div style="color: var(--secondary); font-size: 1.5rem;"><i class="fas fa-arrows-alt-h"></i></div>
+                    <div
+                        style="padding: 1.5rem; border: 1px solid #10b981; border-radius: 1rem; min-width: 150px; background: rgba(16, 185, 129, 0.05);">
+                        <i class="fas fa-database"
+                            style="font-size: 2rem; color: #10b981; margin-bottom: 0.5rem;"></i><br>
+                        <strong>Database</strong><br><small>(The Storage)</small>
+                    </div>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <!-- Frontend -->
+                    <div class="viva-item" style="border-top: 4px solid var(--primary);">
+                        <h3 style="color: var(--primary);"><i class="fab fa-html5"></i> 1.3.1 Frontend</h3>
+                        <p class="content-text" style="font-size: 0.95rem;">The visible part of a website. It is what
+                            users see and interact with (Buttons, Menus, Forms).</p>
+                        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="viva-item" style="border-top: 4px solid var(--secondary);">
+                        <h3 style="color: var(--secondary);"><i class="fas fa-server"></i> 1.3.2 Backend</h3>
+                        <p class="content-text" style="font-size: 0.95rem;">The hidden part on the server. It handles
+                            logic like checking passwords and processing data.</p>
+                        <p><strong>Tools:</strong> PHP, Node.js, Python</p>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="viva-item" style="border-top: 4px solid #10b981;">
+                        <h3 style="color: #10b981;"><i class="fas fa-database"></i> 1.3.3 Database</h3>
+                        <p class="content-text" style="font-size: 0.95rem;">Used to store information securely (Names,
+                            Marks). Without it, data cannot be saved.</p>
+                        <p><strong>Tools:</strong> MySQL, MongoDB</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Relationship Example:</strong>
+                    1. User fills registration form (<strong>Frontend</strong>)
+                    &rarr; 2. Data is sent to server to check (<strong>Backend</strong>)
+                    &rarr; 3. User details are saved in a table (<strong>Database</strong>).
+                </div>
+            </div>
+
+            <!-- 1.4 Responsive Design -->
+            <div id="responsive" class="study-guide-section">
+                <h1 class="guide-title">1.4 Basic Concept of Responsive Design</h1>
+                <p class="content-text">Responsive design means creating a website that works properly on all screen
+                    sizes.</p>
+                <p class="content-text">The website should look good on:</p>
+                <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    <li>Mobile phone</li>
+                    <li>Tablet</li>
+                    <li>Laptop</li>
+                    <li>Desktop</li>
+                </ul>
+
+                <hr>
+
+                <h2 class="guide-subtitle">Why Responsive Design is Needed</h2>
+                <p class="content-text">Today people use different devices. If a website is not responsive:</p>
+                <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    <li>Text may become too small</li>
+                    <li>Images may go outside the screen</li>
+                    <li>Buttons may not work properly</li>
+                </ul>
+                <p class="content-text">Responsive design solves these problems.</p>
+
+                <hr>
+
+                <h2 class="guide-subtitle">Features of Responsive Design</h2>
+                <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    <li>Flexible layout</li>
+                    <li>Resizable images</li>
+                    <li>Mobile-friendly menus</li>
+                    <li>Text adjusts automatically</li>
+                </ul>
+
+                <hr>
+
+                <h2 class="guide-subtitle">Example of Responsive CSS</h2>
+                <div class="split-view">
+                    <div class="code-panel">
+                        <div class="panel-header"><span>CSS Media Query</span></div>
+                        <pre><code>&lt;style&gt;
+body {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 34px;
+    }
+}
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;p&gt;This text changes size on small screens!&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                    </div>
+                    <div class="preview-panel" style="background: white;">
+                        <div class="panel-header"><span>Meaning</span></div>
+                        <div style="padding: 1rem; color: black; font-size: 0.9rem;">
+                            • On large screens, text size is 20px<br>
+                            • On small screens, text size becomes 34px
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+
+
+                &lt;body&gt;
+                &lt;h1&gt;I change color on Mobile!&lt;/h1&gt;
+                &lt;/body&gt;</code></pre>
+            </div>
+            <div class="preview-panel" style="background: white;">
+                <div class="panel-header"><span>Rendered Result</span></div>
+                <iframe
+                    srcdoc="<style>body { font-family: sans-serif; padding: 20px; } @media (max-width: 400px) { body { background-color: lightyellow; } }</style><body>If screen width < 600px, background becomes light yellow.</body>"></iframe>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="guide-subtitle">Example of Responsive Website</h2>
+        <div class="split-view">
+            <div class="code-panel">
+                <div class="panel-header"><span>Flexbox Layout</span></div>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.container {
+    display: flex;
+}
+
+.box {
+    width: 50%;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;Box 1&lt;/div&gt;
+    &lt;div class="box"&gt;Box 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <div class="preview-panel">
+                <div class="panel-header"><span>Rendered Result</span></div>
+                <iframe
+                    srcdoc="<style>.container { display: flex; font-family: sans-serif; } .box { width: 50%; background-color: lightblue; padding: 20px; border: 1px solid #fff; text-align: center; } @media (max-width: 400px) { .container { flex-direction: column; } .box { width: 100%; } }</style><body><div class='container'><div class='box'>Box 1</div><div class='box'>Box 2</div></div><p style='font-size:12px; color:gray; margin-top:10px;'>On small screens, boxes go below each other.</p></body>"></iframe>
+            </div>
+        </div>
+        </div>
+
+        <!-- Revision -->
+        <div class="revision-card" style="background: rgba(16, 185, 129, 0.05); border-color: #10b981;">
+            <h2 style="color: #10b981;"><i class="fas fa-check-double"></i> Quick Revision</h2>
+            <ul style="list-style: disc; padding-left: 2rem; color: var(--text-muted);">
+                <li>Browser opens websites</li>
+                <li>HTML creates structure, CSS adds style, JavaScript adds interaction</li>
+                <li>Client sends request, Server sends response</li>
+                <li>Frontend is visible, Backend works on server, Database stores information</li>
+                <li>Responsive design makes websites work on all devices</li>
+            </ul>
+        </div>
+
+        <!-- Viva -->
+        <div class="viva-card">
+            <h2 class="guide-title" style="border-color: var(--secondary); color: var(--secondary);">Viva Questions
+            </h2>
+            <ul class="viva-list">
+                <li class="viva-item">1. What is web development?</li>
+                <li class="viva-item">2. What is a web browser?</li>
+                <li class="viva-item">3. What is the use of HTML?</li>
+                <li class="viva-item">4. Difference between HTML, CSS, and JS?</li>
+                <li class="viva-item">5. What is a client?</li>
+                <li class="viva-item">6. What is a server?</li>
+                <li class="viva-item">7. What is frontend development?</li>
+                <li class="viva-item">8. What is backend development?</li>
+                <li class="viva-item">9. What is a database?</li>
+                <li class="viva-item">10. What is responsive design?</li>
+                <li class="viva-item">11. What is a media query?</li>
+                <li class="viva-item">12. Why is responsive design important?</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

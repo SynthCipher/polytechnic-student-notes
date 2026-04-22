@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 16 - Shape & Geometry</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 16</p>
+            <h1>Shape & Geometry Hierarchy</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>We can build complex families of shapes. A <strong>Circle</strong> is a 2D shape, and a <strong>Cylinder</strong> is like many circles stacked on top of each other.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> A "Square" is a flat shape. But if you take 6 squares and join them, you get a "Cube" (like a Ludo dice).</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: ShapeHierarchyDemo.java
+class Shape {
+    String name;
+    Shape(String n) { name = n; }
+}
+
+class Circle extends Shape {
+    double radius;
+    Circle(double r, String n) { 
+        super(n); 
+        this.radius = r; 
+    }
+    double area() { return Math.PI * radius * radius; }
+}
+
+public class ShapeHierarchyDemo {
+    public static void main(String[] args) {
+        Circle c = new Circle(5.0, "MyCircle");
+        System.out.println("Shape Name: " + c.name);
+        System.out.println("Circle Area: " + c.area());
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Shape: MyCircle<br>
+                Area: 78.5398...
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Create a class hierarchy: <strong>Shape</strong> (Base) -> <strong>Circle</strong>, <strong>Square</strong>. Then extend <strong>Circle</strong> to create <strong>Cylinder</strong> and <strong>Sphere</strong>, and <strong>Square</strong> to create <strong>Cube</strong>. Implement <code>Area()</code> and <code>Volume()</code> methods where applicable.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab15.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab17.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

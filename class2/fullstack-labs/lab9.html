@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 09 - PHP Arithmetic & DB</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 09</p>
+            <h1>PHP Arithmetic & Database</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A webpage can take numbers from a user, do math (Add, Sub), show the result <strong>immediately</strong> on the same page, and then <strong>save</strong> the record in a database table.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a calculator that also saves your history. You add 5 + 5 = 10, and the calculator remembers that calculation for later.
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Arithmetic & Save Code</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: calc.php</span></div>
+                    <pre><code>&lt;?php
+if(isset($_POST['n1'])) {
+  $n1 = $_POST['n1'];
+  $n2 = $_POST['n2'];
+  $op = $_POST['op'];
+  $res = 0;
+
+  if($op == '+') $res = $n1 + $n2;
+  if($op == '*') $res = $n1 * $n2;
+
+  echo "&lt;h2&gt;Result: $res&lt;/h2&gt;";
+
+  // Save to Database
+  $conn = mysqli_connect("localhost", "root", "", "lab_db");
+  $sql = "INSERT INTO history VALUES($n1, $n2, '$op', $res)";
+  mysqli_query($conn, $sql);
+}
+?&gt;</code></pre>
+                </div>
+                <div class="preview-panel" style="background: white; color: #1e293b; font-family: sans-serif;">
+                    <div class="panel-header"><span>Form Submission Result</span></div>
+                    <div style="padding: 1.5rem;">
+                        <div style="border: 1px solid #ccc; padding: 15px; border-radius: 10px;">
+                           Num 1: <input value="20" style="width:40px;"><br>
+                           Num 2: <input value="10" style="width:40px;"><br>
+                           Op: <select><option>+</option></select><br><br>
+                           <button style="background:#6366f1; color:white; border:none; padding:5px 15px; border-radius:5px;">Submit</button>
+                        </div>
+                        <div style="margin-top: 20px; background: #e0e7ff; padding: 10px; border-radius: 5px;">
+                            <strong>Result: 30</strong><br>
+                            <small>Data saved to MySQL!</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Add support for <strong>Subtraction (-)</strong> and <strong>Division (/)</strong>. Ensure the division by zero error is handled.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab8.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab10.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

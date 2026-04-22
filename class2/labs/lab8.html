@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 08 - String Handling</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 08</p>
+            <h1>String Methods</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>String</strong> is just a line of text, like a name, a password, or a sentence. Java has many tools to change or check these strings.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Your Name is a string. If you write your name "jigmat" and change it to "JIGMAT", you are using a string method (toUpperCase).</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: StringMethodsDemo.java
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        String str = "Java Programming";
+        
+        System.out.println("Original String: " + str);
+        System.out.println("In Uppercase: " + str.toUpperCase());
+        System.out.println("Length of String: " + str.length());
+        System.out.println("Character at index 5: " + str.charAt(5));
+        System.out.println("Contains 'Java': " + str.contains("Java"));
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Uppercase: JAVA PROGRAMMING<br>
+                Length: 16<br>
+                Contains 'Java': true
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Design a program that performs the following string operations:<br>
+            1. Check if two strings are equal (ignoring case).<br>
+            2. Reverse a given string without using built-in reverse functions.<br>
+            3. Change the case of a string (Toggle Case: e.g., 'Java' to 'jAVA').</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab7.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab9.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

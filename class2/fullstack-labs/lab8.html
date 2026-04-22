@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 08 - PHP Server App</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 08</p>
+            <h1>PHP Server Application</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>PHP Server-side App</strong> uses PHP to handle URL requests and fetch data from a database. It allows different content to be shown on different URLs.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a library. You ask for a book title (Request), the librarian finds it on the shelf (Database), and gives it to you (Response).
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> PHP Request Handling Code</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: index.php</span></div>
+                    <pre><code>&lt;?php
+// Database connection
+$conn = mysqli_connect("localhost", "root", "", "my_db");
+
+// Simple Routing
+$page = $_GET['id'] ?? 1;
+
+$sql = "SELECT * FROM posts WHERE id = $page";
+$result = mysqli_query($conn, $sql);
+$post = mysqli_fetch_assoc($result);
+
+echo "&lt;h1&gt;" . $post['title'] . "&lt;/h1&gt;";
+echo "&lt;p&gt;" . $post['content'] . "&lt;/p&gt;";
+?&gt;</code></pre>
+                </div>
+                <div class="preview-panel" style="background: #f8fafc; color: #1e293b; font-family: sans-serif;">
+                    <div class="panel-header"><span>Browser Output (?id=1)</span></div>
+                    <div style="padding: 2rem;">
+                        <h1 style="color: #6366f1;">About My School</h1>
+                        <p>Our school was founded in 1995 and has 500 students.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Modify the code to show a message "No Post Found" if the database result is empty.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab7.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab9.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

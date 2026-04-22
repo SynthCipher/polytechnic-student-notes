@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 03 - Static Webpage</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 03</p>
+            <h1>Static Business Webpage</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>Static Webpage</strong> is a website that looks the same for everyone. We use HTML for the "Bones" (structure) and CSS for the "Skin" (style/colors).</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a printed business card or a brochure. It gives information but it doesn't change when you look at it.
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code & Live Preview</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: portfolio.html</span></div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { font-family: Arial; margin: 0; }
+    .navbar { background: #333; color: white; padding: 15px; }
+    .hero { padding: 60px; text-align: center; background: #6366f1; color: white; }
+    .content { padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card { border: 1px solid #ccc; padding: 15px; border-radius: 10px; }
+    footer { background: #333; color: white; text-align: center; padding: 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="navbar"&gt;My Portfolio&lt;/div&gt;
+  &lt;div class="hero"&gt;
+    &lt;h1&gt;Hi, I am Jigmat&lt;/h1&gt;
+    &lt;p&gt;A Full Stack Developer&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content"&gt;
+    &lt;div class="card"&gt;My Project 1&lt;/div&gt;
+    &lt;div class="card"&gt;My Project 2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;Copyright 2026&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Live Preview</span></div>
+                    <iframe srcdoc="<body style='font-family:sans-serif; margin:0;'><div style='background:#333; color:white; padding:15px;'>My Portfolio</div><div style='padding:60px; text-align:center; background:#6366f1; color:white;'><h1>Hi, I am Jigmat</h1><p>A Full Stack Developer</p></div><div style='padding:30px; display:grid; grid-template-columns:1fr 1fr; gap:20px;'><div style='border:1px solid #ccc; padding:15px; border-radius:10px;'>Project 1</div><div style='border:1px solid #ccc; padding:15px; border-radius:10px;'>Project 2</div></div><footer style='background:#333; color:white; text-align:center; padding:10px;'>Copyright 2026</footer></body>"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Build a "Restaurant Menu" page. Use a <strong>Header</strong> for the name, a <strong>Grid</strong> layout to show 4 food items with prices, and a <strong>Footer</strong> with the address.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab2.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab4.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

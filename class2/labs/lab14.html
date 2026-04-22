@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 14 - Car Objects</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 14</p>
+            <h1>Modeling Real-world Objects</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>Class</strong> is a blueprint (like a drawing of a house), and an <strong>Object</strong> is the real thing (the actual house built from the drawing).</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> A "Car" is a class. It says every car must have 4 wheels and a color. A "Blue Hyundai i20" and a "White Alto 800" are real <strong>Objects</strong> made from that Car class.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: CarDemo.java
+class Car {
+    String model, color;
+    int year;
+    
+    // Constructor to initialize object
+    Car(String m, String c, int y) {
+        model = m; color = c; year = y;
+    }
+    
+    void displayInfo() {
+        System.out.println("Model: " + model);
+        System.out.println("Color: " + color);
+        System.out.println("Year: " + year);
+        System.out.println("--------------------");
+    }
+}
+
+public class CarDemo {
+    public static void main(String[] args) {
+        Car car1 = new Car("Hyundai i20", "Blue", 2022);
+        Car car2 = new Car("Alto 800", "Silver", 2021);
+        
+        car1.displayInfo();
+        car2.displayInfo();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Hyundai i20 [Blue] - 2022
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Consider a Class <strong>Car</strong> under which Hyundai-i20, Alto-800, and Ignis represent individual Objects. Define properties: <code>Model</code>, <code>Year</code>, <code>Color</code>, <code>Top Speed</code>. Implement methods: <code>Create()</code> to initialize, <code>Sold()</code> to mark status, and <code>display()</code> to show details.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab13.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab15.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 20 - Multithreading</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 20</p>
+            <h1>Multithreading in Java</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Multithreading</strong> means doing many tasks at the same time. Instead of waiting for one task to finish, the computer works on many tasks together.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Like a chef in a restaurant. He can boil water, chop vegetables, and talk to a waiter all at the same time. If he did only one thing at a time, the food would take forever!</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: MultiThreadDemo.java
+class MyThread extends Thread {
+    public void run() {
+        try {
+            for(int i=1; i<=3; i++) {
+                System.out.println(Thread.currentThread().getName() + " printing: " + i);
+                Thread.sleep(500); // Wait for half a second
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thread Interrupted");
+        }
+    }
+}
+
+public class MultiThreadDemo {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        
+        t1.setName("Thread-A");
+        t2.setName("Thread-B");
+        
+        t1.start(); // Start first thread
+        t2.start(); // Start second thread
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Thread-0: 1<br>
+                Thread-1: 1<br>
+                Thread-0: 2<br>
+                Thread-1: 2...
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 2 programs using the multiple thread concept:<br>
+            1. Create two threads: one to print odd numbers and another to print even numbers up to 20.<br>
+            2. Implement a "Producer-Consumer" style simple thread synchronization if possible, or just run two threads with different priorities.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab19.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

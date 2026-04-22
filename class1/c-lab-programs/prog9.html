@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 9: Do-While Statement | GPC LEH</title>
+    <link rel='icon' type='image/png' href='../../assets/logo1.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Repeat <br><span style="color: var(--primary);">Once</span></h1>
+            <p class="subtitle">Practical 9: Implementing post-test loops using 'do-while'.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Note & Definition</h3>
+            <p>The 'do-while' loop is a post-test loop, meaning the condition is checked AFTER the loop body executes. This guarantees that the loop runs at least once, regardless of whether the condition is true or false. It is useful when the initial execution is required before testing.</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    do {
+        printf("%d ", i);
+        i++;
+    } while(i <= 3);
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>1 2 3</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Write a program using do-while to print numbers from 10 down to 1 (reverse order).</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Save as <code>PROG9.C</code></li>
+                    <li>Type: <code>gcc PROG9.C -o prog9</code></li>
+                    <li>Type: <code>./prog9</code></li>
+                </ol>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Open <code>TC.EXE</code></li>
+                    <li>Press <strong>Alt + F9</strong> to Compile</li>
+                    <li>Press <strong>Ctrl + F9</strong> to Run</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

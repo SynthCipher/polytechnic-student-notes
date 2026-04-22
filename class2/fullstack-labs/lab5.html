@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 05 - Bootstrap Layout</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 05</p>
+            <h1>Responsive Design (Bootstrap)</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Bootstrap</strong> is a kit of ready-made designs. It helps our website look good on both mobile phones and big computers automatically using a <strong>Grid System</strong>.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like using "Readymade Clothes". You don't have to sew the shirt yourself; you just pick a size (class) and wear it. It fits perfectly!
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code & Live Preview</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: bootstrap_demo.html</span></div>
+                    <pre><code>&lt;!-- Navbar --&gt;
+&lt;nav class="navbar navbar-dark bg-dark"&gt;
+  &lt;span class="navbar-brand mb-0 h1"&gt;My App&lt;/span&gt;
+&lt;/nav&gt;
+
+&lt;!-- Cards Grid --&gt;
+&lt;div class="container mt-4"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5&gt;Card 1&lt;/h5&gt;
+          &lt;button class="btn btn-primary"&gt;Go&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Live Preview</span></div>
+                    <iframe srcdoc="<head><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'></head><body style='background:#f4f4f4'><nav class='navbar navbar-dark bg-dark px-3'><span class='navbar-brand'>My App</span></nav><div class='container mt-4'><div class='row'><div class='col-6'><div class='card p-3'><h5>Item A</h5><button class='btn btn-primary btn-sm'>Action</button></div></div><div class='col-6'><div class='card p-3'><h5>Item B</h5><button class='btn btn-success btn-sm'>Action</button></div></div></div></div></body>"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Build a "Photo Gallery" using Bootstrap. Use a <code>row</code> with 3 <code>col-md-4</code> columns. Put an image and a "Like" button inside each column.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab4.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab6.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

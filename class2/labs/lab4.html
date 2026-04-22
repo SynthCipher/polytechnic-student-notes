@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 04 - Arrays</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 04</p>
+            <h1>Working with Arrays</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>An <strong>Array</strong> is like a collection of same things kept together. Instead of making 10 variables for 10 marks, we make 1 array called 'marks'.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Like an egg tray. It is one object, but it can hold many eggs. Each hole has a position (index) starting from 0.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: ArrayDemo.java
+public class ArrayDemo {
+    public static void main(String[] args) {
+        // Declaring and initializing an array
+        int[] numbers = {10, 20, 30, 40, 50};
+        
+        System.out.println("Array elements are:");
+        // Using for-each loop to print elements
+        for(int x : numbers) {
+            System.out.println("Element: " + x);
+        }
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Array elements:<br>
+                10 20 30 40 50
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 2 programs to explore arrays:<br>
+            1. Find the largest and smallest element in a 1D array.<br>
+            2. Perform addition of two 3x3 matrices (2D arrays).</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab3.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab5.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

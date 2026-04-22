@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 12: 2D Array | GPC LEH</title>
+    <link rel='icon' type='image/png' href='../../assets/logo1.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Table <br><span style="color: var(--primary);">Array</span></h1>
+            <p class="subtitle">Practical 12: Storing data in matrix format using 2D arrays.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Note & Definition</h3>
+            <p>A 2D array is an array of arrays, representing data in a table format with rows and columns. It is commonly used for mathematical matrices and grid-based data structures. Accessing an element requires two indices: <code>[row_index][column_index]</code>.</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int table[2][2] = {{1, 2}, {3, 4}};
+    printf("Element at [0][0]: %d\n", table[0][0]);
+    printf("Element at [1][1]: %d\n", table[1][1]);
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Element at [0][0]: 1
+Element at [1][1]: 4</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Write a program to store a 2x2 matrix and print all its elements in a proper row-column format using nested loops.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Save as <code>PROG12.C</code></li>
+                    <li>Type: <code>gcc PROG12.C -o prog12</code></li>
+                    <li>Type: <code>./prog12</code></li>
+                </ol>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Open <code>TC.EXE</code></li>
+                    <li>Press <strong>Alt + F9</strong> to Compile</li>
+                    <li>Press <strong>Ctrl + F9</strong> to Run</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

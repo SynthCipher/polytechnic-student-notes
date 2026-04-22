@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 02 - CSS Techniques</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 02</p>
+            <h1>Demonstration of CSS Techniques</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Flexbox</strong> is a CSS tool used to arrange items in a row or a column easily. It helps us center things or spread them out evenly without using complex math.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like people sitting on a bench. If the bench is "Flex", you can tell people to sit in the middle, sit far apart, or sit all to one side very easily.
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code & Live Preview</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: style.css</span></div>
+                    <pre><code>&lt;style&gt;
+  /* Box Model & Colors */
+  .box {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid #6366f1;
+    background-color: #e0e7ff;
+    color: #1e293b;
+    border-radius: 15px;
+  }
+
+  /* Flexbox Layout */
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Positioning */
+  .fixed-top {
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+&lt;/style&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Live Preview</span></div>
+                    <iframe srcdoc="<style>.box{width:150px; padding:20px; margin:10px; border:5px solid #6366f1; background:#e0e7ff; border-radius:15px; text-align:center; font-family:sans-serif;} .flex{display:flex; justify:center; gap:10px;}</style><body style='padding:20px;'><div class='flex'><div class='box'>Box 1</div><div class='box'>Box 2</div></div></body>"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Create 3 boxes of different colors. Use <code>display: flex</code> to align them horizontally and add <code>margin: 20px</code> between them.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab1.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab3.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

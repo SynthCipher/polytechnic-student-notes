@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 6: If Statement | GPC LEH</title>
+    <link rel='icon' type='image/png' href='../../assets/logo1.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Checking <br><span style="color: var(--primary);">Condition</span></h1>
+            <p class="subtitle">Practical 6: Simple decision making using the 'if' statement.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Definition</h3>
+            <p>The <code>if</code> statement is the most basic way to make a program "smart." It works like a gatekeeper. It checks a condition (like is age >= 18?), and only if that condition is <strong>True</strong>, it allows the code inside the curly braces <code>{ }</code> to run. If the condition is False, the code is simply ignored.</p>
+        </div>
+
+        <div class="note-card" style="border-left-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+            <h3><i class="fas fa-lightbulb"></i> Real-Life Analogy</h3>
+            <p>An <code>if</code> statement is like checking the sky before leaving home. <strong>IF</strong> it is raining, you take an umbrella. If it is NOT raining, you don't do anything special. The decision depends entirely on the condition of the sky.</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    if(age >= 18) {
+        printf("You are eligible to vote!\n");
+    }
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Enter your age: 20
+You are eligible to vote!</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Write a program that takes a temperature as input and prints "It's hot!" if the temperature is above 35 degrees.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC (Shortcut)</h4>
+                <p>Using <strong>Dev-C++</strong> or similar:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Press <strong>F11</strong> to Compile and Run.</li>
+                </ul>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Press <strong>Alt + F9</strong> then <strong>Ctrl + F9</strong></li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

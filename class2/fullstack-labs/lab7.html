@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 07 - Node.js Server App</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 07</p>
+            <h1>Node.js Server Application</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Node.js</strong> is a platform to run JavaScript on a server. We can create a <strong>Server</strong> that listens for requests and sends responses (like HTML or Data).</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a phone operator. When you dial a number (Request), the operator connects you to the right person (Response).
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Node.js Server Code</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: server.js</span></div>
+                    <pre><code>const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  
+  if(req.url === '/') {
+      res.write('&lt;h1&gt;Welcome to Home&lt;/h1&gt;');
+  } else if(req.url === '/contact') {
+      res.write('&lt;h1&gt;Contact: 999000111&lt;/h1&gt;');
+  } else {
+      res.write('&lt;h1&gt;404 Not Found&lt;/h1&gt;');
+  }
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});</code></pre>
+                </div>
+                <div class="preview-panel" style="background: #1e293b; color: #fff; font-family: monospace;">
+                    <div class="panel-header"><span>Terminal Output</span></div>
+                    <div style="padding: 2rem;">
+                        $ node server.js<br>
+                        Server started...<br><br>
+                        <span style="color: #94a3b8;">[Request] GET /contact</span><br>
+                        <span style="color: #94a3b8;">[Response] 200 OK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Create a new route called <code>/help</code>. When the user visits this route, the server should send back a message: "How can we help you today?".</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab6.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab8.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

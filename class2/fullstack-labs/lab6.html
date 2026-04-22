@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 06 - PHP Fundamentals</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 06</p>
+            <h1>PHP Basics & Operators</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>PHP</strong> is a server-side language. It runs on the server (like a hidden brain) and creates the HTML that the user sees. We use it for logic and math.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a kitchen in a restaurant. You (the user) are in the dining hall. The PHP is the chef in the kitchen who takes your order and prepares the food (data).
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code & Output</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: test.php</span></div>
+                    <pre><code>&lt;?php
+  $name = "Jigmat";   // String
+  $age  = 21;         // Integer
+  $isStudent = true;  // Boolean
+  $marks = 85.5;      // Float
+
+  // Arithmetic Operators
+  $a = 10; $b = 3;
+  echo "Sum: " . ($a + $b);
+  echo "Product: " . ($a * $b);
+  echo "Modulo: " . ($a % $b);
+
+  // Logical Operator
+  if($age > 18 && $isStudent) {
+      echo "Adult Student";
+  }
+?&gt;</code></pre>
+                </div>
+                <div class="preview-panel" style="background: #f8fafc;">
+                    <div class="panel-header"><span>Browser Output</span></div>
+                    <div style="padding: 2rem; color: #1e293b; font-family: sans-serif;">
+                        <p>Sum: 13</p>
+                        <p>Product: 30</p>
+                        <p>Modulo: 1</p>
+                        <p><strong>Adult Student</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Create 3 variables for 3 subjects' marks. Calculate the <strong>Average</strong> and <strong>Total</strong>. Print them using <code>echo</code>.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab5.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab7.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

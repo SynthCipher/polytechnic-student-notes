@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 2: Variables & Assignments | GPC LEH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Storing <br><span style="color: var(--primary);">Numbers</span></h1>
+            <p class="subtitle">Practical 2: Learning about data types and variable initialization.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Definition</h3>
+            <p>Variables are like small storage boxes in memory. In C, you must declare the type of box (int, float, char). The '=' sign is the assignment operator, which puts a value inside the box.</p>
+        </div>
+
+        <div class="note-card" style="border-left-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+            <h3><i class="fas fa-lightbulb"></i> Real-Life Analogy</h3>
+            <p>Variables are like labeled jars in a kitchen. You have a jar for salt (int), a jar for oil (float), and a jar for a spoon (char). You label them so you don't mix up the items inside.</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block"><pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 20;
+    float marks = 85.5;
+    printf("Age: %d, Marks: %.1f\n", age, marks);
+    return 0;
+}
+</pre></div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Age: 20, Marks: 85.5</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Create variables for your 'Year' and 'Percentage' and print them with labels.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC (Shortcut)</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Press <strong>F11</strong> to Compile and Run.</li>
+                </ul>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Alt + F9 to Compile</li>
+                    <li>Ctrl + F9 to Run</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+                <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

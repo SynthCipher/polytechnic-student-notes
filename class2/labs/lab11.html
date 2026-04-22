@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 11 - Inheritance</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 11</p>
+            <h1>Types of Inheritance</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Inheritance</strong> is when a class gets functions and variables from another class. This helps us reuse code instead of writing it again.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> You inherit your surname, property, and house from your parents. You don't have to build a new house if you already have one from your parents.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: InheritanceDemo.java
+class Parent {
+    void show() { 
+        System.out.println("This is the Parent Class method."); 
+    }
+}
+
+class Child extends Parent {
+    void display() { 
+        System.out.println("This is the Child Class method."); 
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.show();    // Accessing parent method
+        obj.display(); // Accessing child method
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Parent Class<br>
+                Child Class
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 5 programs to demonstrate:<br>
+            1. Single Inheritance<br>
+            2. Multilevel Inheritance (Grandparent -> Parent -> Child)<br>
+            3. Hierarchical Inheritance (One parent, multiple children)<br>
+            4. Method overriding in inheritance.<br>
+            5. Using final keyword with inheritance.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab10.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab12.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

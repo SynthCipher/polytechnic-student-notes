@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13 - Interfaces</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 13</p>
+            <h1>Interfaces & Multiple Inheritance</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>An <strong>Interface</strong> is like a set of rules or a "To-Do List". Any class that uses the interface MUST follow all the rules.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> A "Driver's License" is an interface. It has rules: You must know how to steer, how to brake, and how to park. Any person (class) who wants to be a Driver must follow these rules.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: InterfaceDemo.java
+interface Printable { 
+    void print(); 
+}
+
+interface Showable { 
+    void show(); 
+}
+
+class Demo implements Printable, Showable {
+    public void print() { System.out.println("Printing document..."); }
+    public void show() { System.out.println("Showing preview..."); }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        obj.print();
+        obj.show();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Printing...<br>
+                Showing...
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 2 programs to explore the multiple inheritance concept:<br>
+            1. Create interfaces <code>Flyable</code> and <code>Swimmable</code>, and a class <code>Duck</code> that implements both.<br>
+            2. Interface <code>Camera</code> and <code>Phone</code> implemented by a <code>SmartPhone</code> class.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab12.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab14.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

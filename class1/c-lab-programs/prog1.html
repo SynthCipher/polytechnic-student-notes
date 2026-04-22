@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 1: Executing & Editing | GPC LEH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Starting <br><span style="color: var(--primary);">with C</span></h1>
+            <p class="subtitle">Practical 1: Simple program to start.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Definition</h3>
+            <p>Every C program must follow a specific structure to be understood by the computer. The <code>#include &lt;stdio.h&gt;</code> part is called a Preprocessor Directive. It tells the compiler to load the "Standard Input Output" library. The <code>int main()</code> is the entry point, and <code>return 0</code> indicates success.</p>
+        </div>
+
+        <div class="note-card" style="border-left-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+            <h3><i class="fas fa-lightbulb"></i> Real-Life Analogy</h3>
+            <p>Think of a C program like a formal letter. The Header is the sender's address, the Main function is the body where you write the message, and Return 0 is the formal closing like "Yours Sincerely".</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block"><pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Welcome to C Programming Lab!\n");
+    return 0;
+}
+</pre></div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Welcome to C Programming Lab!</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Modify the program to print your Full Name, Semester, and Roll Number on separate lines.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC (Shortcut)</h4>
+                <p>If you are using <strong>Dev-C++</strong> or <strong>Code::Blocks</strong>:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Press <strong>F11</strong> to Compile and Run instantly.</li>
+                </ul>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Alt + F9 to Compile</li>
+                    <li>Ctrl + F9 to Run</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+                <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

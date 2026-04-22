@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java OOPs Lab | GPC LEH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../assets/logo1.png">
+    <style>
+        .curriculum-item {
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            transition: var(--transition);
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+            margin-bottom: 1rem;
+        }
+
+        .curriculum-item:hover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+            transform: translateX(10px);
+        }
+
+        .curriculum-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            width: 30px;
+            text-align: center;
+        }
+
+        .lab-info h3 {
+            margin-bottom: 0.25rem;
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+
+        .lab-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .lab-number {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        /* Animation Delays */
+        .curriculum-item:nth-child(n) { animation-delay: calc(0.05s * var(--i)); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Back to 2nd Year
+            </a>
+            <h1>Java <br><span style="color: var(--secondary);">OOPs Lab</span></h1>
+            <p class="subtitle">Semester: 4th | Credit: 2<br>Comprehensive guide for Object Oriented Programming using Java.</p>
+        </div>
+    </header>
+
+    <main class="section-container">
+        <h2 class="section-title">Laboratory Practicals</h2>
+        
+        <div class="curriculum-list">
+            <!-- Lab 1 -->
+            <a href="labs/lab1.html" class="curriculum-item" style="--i: 1">
+                <i class="fas fa-tools"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 01</span>
+                    <h3>Environment Setup & Hello World</h3>
+                    <p>JDK/NetBeans Installation and basic compilation & execution.</p>
+                </div>
+            </a>
+
+            <!-- Lab 2 -->
+            <a href="labs/lab2.html" class="curriculum-item" style="--i: 2">
+                <i class="fas fa-database"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 02</span>
+                    <h3>Data Types & Control Structures</h3>
+                    <p>Exploring variables, operators, and decision statements.</p>
+                </div>
+            </a>
+
+            <!-- Lab 3 -->
+            <a href="labs/lab3.html" class="curriculum-item" style="--i: 3">
+                <i class="fas fa-redo"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 03</span>
+                    <h3>Labelled Loops</h3>
+                    <p>Advanced control flow using labels in nested loops.</p>
+                </div>
+            </a>
+
+            <!-- Lab 4 -->
+            <a href="labs/lab4.html" class="curriculum-item" style="--i: 4">
+                <i class="fas fa-th-list"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 04</span>
+                    <h3>Arrays</h3>
+                    <p>1D and 2D arrays for structured data storage.</p>
+                </div>
+            </a>
+
+            <!-- Lab 5 -->
+            <a href="labs/lab5.html" class="curriculum-item" style="--i: 5">
+                <i class="fas fa-arrows-alt"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 05</span>
+                    <h3>This & Super Keywords</h3>
+                    <p>Rectangle and Box class design using member access keywords.</p>
+                </div>
+            </a>
+
+            <!-- Lab 6 -->
+            <a href="labs/lab6.html" class="curriculum-item" style="--i: 6">
+                <i class="fas fa-university"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 06</span>
+                    <h3>Bank Account (Inheritance)</h3>
+                    <p>Using static and inheritance for banking functions.</p>
+                </div>
+            </a>
+
+            <!-- Lab 7 -->
+            <a href="labs/lab7.html" class="curriculum-item" style="--i: 7">
+                <i class="fas fa-ghost"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 07</span>
+                    <h3>Abstract Classes</h3>
+                    <p>Designing blueprints using abstract methods and classes.</p>
+                </div>
+            </a>
+
+            <!-- Lab 8 -->
+            <a href="labs/lab8.html" class="curriculum-item" style="--i: 8">
+                <i class="fas fa-font"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 08</span>
+                    <h3>String Class Methods</h3>
+                    <p>Custom string handling for reversal and case changes.</p>
+                </div>
+            </a>
+
+            <!-- Lab 9 -->
+            <a href="labs/lab9.html" class="curriculum-item" style="--i: 9">
+                <i class="fas fa-clone"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 09</span>
+                    <h3>Method Overloading</h3>
+                    <p>Implementing polymorphism with same-name methods.</p>
+                </div>
+            </a>
+
+            <!-- Lab 10 -->
+            <a href="labs/lab10.html" class="curriculum-item" style="--i: 10">
+                <i class="fas fa-hammer"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 10</span>
+                    <h3>Constructors</h3>
+                    <p>Refactoring previous classes with various constructors.</p>
+                </div>
+            </a>
+
+            <!-- Lab 11 -->
+            <a href="labs/lab11.html" class="curriculum-item" style="--i: 11">
+                <i class="fas fa-sitemap"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 11</span>
+                    <h3>Inheritance Types</h3>
+                    <p>Exploring Single, Multilevel, and Hierarchical inheritance.</p>
+                </div>
+            </a>
+
+            <!-- Lab 12 -->
+            <a href="labs/lab12.html" class="curriculum-item" style="--i: 12">
+                <i class="fas fa-box-open"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 12</span>
+                    <h3>Packages & Modifiers</h3>
+                    <p>Organizing code and testing visibility modifiers.</p>
+                </div>
+            </a>
+
+            <!-- Lab 13 -->
+            <a href="labs/lab13.html" class="curriculum-item" style="--i: 13">
+                <i class="fas fa-link"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 13</span>
+                    <h3>Interfaces</h3>
+                    <p>Achieving multiple inheritance through interfaces.</p>
+                </div>
+            </a>
+
+            <!-- Lab 14 -->
+            <a href="labs/lab14.html" class="curriculum-item" style="--i: 14">
+                <i class="fas fa-car"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 14</span>
+                    <h3>Car Object Modeling</h3>
+                    <p>Developing specific car objects with unique properties.</p>
+                </div>
+            </a>
+
+            <!-- Lab 15 -->
+            <a href="labs/lab15.html" class="curriculum-item" style="--i: 15">
+                <i class="fas fa-users"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 15</span>
+                    <h3>Employee Base Class</h3>
+                    <p>Common behaviors and specialized roles in a company.</p>
+                </div>
+            </a>
+
+            <!-- Lab 16 -->
+            <a href="labs/lab16.html" class="curriculum-item" style="--i: 16">
+                <i class="fas fa-shapes"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 16</span>
+                    <h3>Shape & Geometry</h3>
+                    <p>Complex hierarchy for area and volume calculation.</p>
+                </div>
+            </a>
+
+            <!-- Lab 17 -->
+            <a href="labs/lab17.html" class="curriculum-item" style="--i: 17">
+                <i class="fas fa-puzzle-piece"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 17</span>
+                    <h3>Partial Implementation</h3>
+                    <p>Implementing interfaces partially using abstract classes.</p>
+                </div>
+            </a>
+
+            <!-- Lab 18 -->
+            <a href="labs/lab18.html" class="curriculum-item" style="--i: 18">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 18</span>
+                    <h3>Exception Handling</h3>
+                    <p>Robust coding with try and multiple catch blocks.</p>
+                </div>
+            </a>
+
+            <!-- Lab 19 -->
+            <a href="labs/lab19.html" class="curriculum-item" style="--i: 19">
+                <i class="fas fa-project-diagram"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 19</span>
+                    <h3>Nested Try & Throws</h3>
+                    <p>Advanced error handling with nested blocks and throws.</p>
+                </div>
+            </a>
+
+            <!-- Lab 20 -->
+            <a href="labs/lab20.html" class="curriculum-item" style="--i: 20">
+                <i class="fas fa-layer-group"></i>
+                <div class="lab-info">
+                    <span class="lab-number">Practical 20</span>
+                    <h3>Multithreading</h3>
+                    <p>Developing concurrent programs using Thread class.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="note-card">
+            <h3><i class="fas fa-info-circle"></i> Course Objective</h3>
+            <p>Determine the resultant of various forces, compute support reactions using equilibrium conditions, and master object-oriented principles through Java implementation.</p>
+        </div>
+    </main>
+
+    <a href="../index.html" class="floating-home">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Java OOPs Laboratory | Department of Computer Engineering</p>
+        </div>
+    </footer>
+</body>
+</html>

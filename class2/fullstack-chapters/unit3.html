@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 3: Simple Backend | Full Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+    <style>
+        .analogy-box { background: rgba(99, 102, 241, 0.05); border-left: 5px solid var(--secondary); padding: 1.5rem; margin: 2rem 0; border-radius: 0 1rem 1rem 0; }
+        .analogy-box h4 { color: var(--secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .topic-header { background: var(--surface); padding: 1rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--glass-border); margin-top: 3rem; color: var(--secondary); display: flex; align-items: center; gap: 0.75rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo"><img src="../../assets/logo.png" alt="Logo"><span>GPC LEH</span></a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Overview</a>
+            <h1>Unit 3: <br><span style="color: var(--secondary);">The Hidden Logic</span></h1>
+            <p class="subtitle">A simple guide to PHP and Databases with easy examples.</p>
+        </div>
+    </header>
+
+    <main class="section-container">
+        
+        <!-- 3.1 PHP -->
+        <h2 class="topic-header"><i class="fab fa-php"></i> 3.1 PHP (The Hidden Chef)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-user-tie"></i> Real-Life Analogy: The Hidden Chef</h4>
+            <p>Imagine you order a cake. You see the cake (Frontend), but you don't see the <strong>Chef</strong> mixing the ingredients and baking it in the kitchen. <strong>PHP</strong> is that Chef—it does the work behind the scenes where you can't see it.</p>
+        </div>
+        
+        <h3 class="section-title">Code Example: PHP Math</h3>
+        <div class="split-view">
+            <div class="code-panel">
+                <div class="panel-header"><span>PHP Snapshot</span></div>
+                <pre><code>&lt;?php
+  $a = 10;
+  $b = 20;
+  $sum = $a + $b;
+
+  echo "The total is: " . $sum;
+?&gt;</code></pre>
+            </div>
+            <div class="preview-panel">
+                <div class="panel-header"><span>Simulated Output</span></div>
+                <div style="background: #1e293b; color: #10b981; padding: 2rem; height: 100%; font-family: 'Fira Code', monospace;">
+                    [Server Processing...]<br><br>
+                    The total is: 30
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.1.2 Sessions -->
+        <h2 class="topic-header"><i class="fas fa-id-card"></i> 3.1.2 Sessions (The ID Card)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-key"></i> Real-Life Analogy: Hotel Key Card</h4>
+            <p>When you check into a hotel, they give you a <strong>Key Card</strong>. Every time you go to the gym, the pool, or your room, the card tells the hotel who you are. A <strong>Session</strong> in PHP is like that key card—it remembers you are logged in as you move from page to page.</p>
+        </div>
+
+        <!-- 3.1.3 GET vs POST -->
+        <h2 class="topic-header"><i class="fas fa-envelope"></i> 3.1.3 GET vs POST</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-mail-bulk"></i> Real-Life Analogy: Postcard vs Letter</h4>
+            <p>• <strong>GET</strong> is like a <strong>Postcard</strong>. Anyone who handles it can see the message (it's in the URL). Fine for a "Hello!".</p>
+            <p>• <strong>POST</strong> is like a <strong>Sealed Letter</strong>. The message is hidden inside the envelope. Much safer for secrets like passwords.</p>
+        </div>
+
+        <!-- 3.1.4 MySQL -->
+        <h2 class="topic-header"><i class="fas fa-database"></i> 3.1.4 MySQL (The Notebook)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-book"></i> Real-Life Analogy: The Phonebook</h4>
+            <p>MySQL is like a giant <strong>Phonebook</strong> or <strong>Notebook</strong>. It has rows and columns where you save names, numbers, and addresses so you can find them later. Using PHP, you can "Search", "Add", or "Delete" names from this notebook.</p>
+        </div>
+
+        <h3 class="section-title">Common Database Words</h3>
+        <div class="grid-layout">
+            <div class="card">
+                <h4>SELECT</h4>
+                <p>Means "Go find this data for me."</p>
+            </div>
+            <div class="card">
+                <h4>INSERT</h4>
+                <p>Means "Add new data to the book."</p>
+            </div>
+            <div class="card">
+                <h4>UPDATE</h4>
+                <p>Means "Change some old data to new."</p>
+            </div>
+            <div class="card">
+                <h4>DELETE</h4>
+                <p>Means "Erase this data forever."</p>
+            </div>
+        </div>
+
+        <div class="homework-card" style="margin-top: 4rem;">
+            <h3><i class="fas fa-pen-fancy"></i> Unit 3 Task</h3>
+            <p>Write down a list of 3 things you would store in a database if you were building an app like WhatsApp (Example: Messages).</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

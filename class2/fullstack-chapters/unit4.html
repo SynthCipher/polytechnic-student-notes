@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4: Simple Modern Backend | Full Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+    <style>
+        .analogy-box { background: rgba(99, 102, 241, 0.05); border-left: 5px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 0 1rem 1rem 0; }
+        .analogy-box h4 { color: var(--accent); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .topic-header { background: var(--surface); padding: 1rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--glass-border); margin-top: 3rem; color: var(--accent); display: flex; align-items: center; gap: 0.75rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo"><img src="../../assets/logo.png" alt="Logo"><span>GPC LEH</span></a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Overview</a>
+            <h1>Unit 4: <br><span style="color: var(--accent);">Modern Magic</span></h1>
+            <p class="subtitle">A simple guide to Node.js and MongoDB with easy examples.</p>
+        </div>
+    </header>
+
+    <main class="section-container">
+        
+        <!-- 3.3.1 Node.js -->
+        <h2 class="topic-header"><i class="fab fa-node-js"></i> 3.3.1 Node.js (JavaScript Traveling)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-plane"></i> Real-Life Analogy: The Language of the World</h4>
+            <p>Imagine JavaScript is a language that used to be spoken <strong>only</strong> on an island called "The Browser". <strong>Node.js</strong> is like a plane that took JavaScript and allowed it to travel and work in every country (on the Server). Now, one language can be used everywhere!</p>
+        </div>
+        
+        <h3 class="section-title">Code Example: A Simple Message</h3>
+        <div class="split-view">
+            <div class="code-panel">
+                <div class="panel-header"><span>Node.js Snapshot</span></div>
+                <pre><code>// Simple logic to print a message
+console.log("Node is running! 🚀");
+
+const x = 5;
+const y = 5;
+console.log("Result: " + (x + y));</code></pre>
+            </div>
+            <div class="preview-panel">
+                <div class="panel-header"><span>Terminal Preview</span></div>
+                <div style="background: #000; color: #fff; padding: 2rem; height: 100%; font-family: 'Fira Code', monospace;">
+                    $ node app.js<br>
+                    Node is running! 🚀<br>
+                    Result: 10
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.3.3 NPM -->
+        <h2 class="topic-header"><i class="fas fa-shopping-cart"></i> 3.3.3 NPM (The Tool Shop)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-toolbox"></i> Real-Life Analogy: The Lego Box</h4>
+            <p>NPM is like a giant <strong>Box of Legos</strong>. Instead of building every tiny piece yourself, you can go to the box and pick out a pre-made "Wheel" or a "Window" (Packages) and snap it onto your project. It makes building huge things very easy!</p>
+        </div>
+
+        <!-- 3.3.4 Callbacks -->
+        <h2 class="topic-header"><i class="fas fa-phone-alt"></i> 3.3.4 Callbacks (The "Call Me Back")</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-pizza-slice"></i> Real-Life Analogy: Pizza Order</h4>
+            <p>When you order pizza, you don't stand at the counter and wait for 20 minutes (Blocking). You give them your number and say, <strong>"Call me back when it's ready"</strong> (Callback). In the meantime, you can go shopping or watch a movie. Node.js works exactly like this!</p>
+        </div>
+
+        <!-- 3.3.7 MongoDB -->
+        <h2 class="topic-header"><i class="fas fa-leaf"></i> 3.3.7 MongoDB (The Filing Cabinet)</h2>
+        <div class="analogy-box">
+            <h4><i class="fas fa-folder-open"></i> Real-Life Analogy: The Modern Folder</h4>
+            <p>Unlike MySQL which is like a strict table, <strong>MongoDB</strong> is like a <strong>Filing Cabinet</strong> where you can throw in different types of folders. One folder might have 2 papers, another might have 5. It's very flexible and "No-Stress" (No-SQL).</p>
+        </div>
+
+        <h3 class="section-title">In-Depth: Connecting to MongoDB</h3>
+        <p>Connecting sounds scary, but it's just like <strong>Plugging in a Cable</strong>.</p>
+        <div class="code-block" style="background: #1e293b; color: #f8fafc; padding: 2rem; border-radius: 1rem; border-left: 5px solid var(--accent);">
+<pre><code>// 1. Tell Node to use the Mongoose tool
+const mongoose = require('mongoose');
+
+// 2. The Address of your database
+const dbURL = 'mongodb://localhost:27017/college';
+
+// 3. Plug it in!
+mongoose.connect(dbURL)
+  .then(() => {
+    console.log("Connected! Ready to store data. ✅");
+  })
+  .catch((err) => {
+    console.log("Oops! Could not connect. ❌");
+  });</code></pre>
+        </div>
+
+        <div class="homework-card" style="margin-top: 4rem;">
+            <h3><i class="fas fa-lightbulb"></i> Unit 4 Thought Task</h3>
+            <p>Think of an app you use every day (like Instagram). If it used the "Pizza Order" logic (Callback), how would it handle uploading a photo while you continue scrolling?</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

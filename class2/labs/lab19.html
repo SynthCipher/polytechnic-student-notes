@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 19 - Advanced Exceptions</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 19</p>
+            <h1>Nested Try, Throw & Throws</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Throw</strong> is when we "shout" that an error happened. <strong>Throws</strong> is a warning that a function might cause an error. <strong>Nested Try</strong> is putting one try block inside another.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> If you find a fire in the building, you "throw" an alarm. The building's sign "Caution: Fire Hazard" is like a "throws" warning.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: NestedExceptionDemo.java
+public class NestedExceptionDemo {
+    // Method using throws
+    static void checkAge(int age) throws ArithmeticException {
+        if(age < 18) {
+            // Explicitly throwing an exception
+            throw new ArithmeticException("Age is less than 18, not eligible.");
+        } else {
+            System.out.println("Eligible for voting.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            // Outer try block
+            try {
+                // Inner try block
+                checkAge(15);
+            } catch(ArithmeticException e) {
+                System.out.println("Caught in Inner Block: " + e.getMessage());
+            }
+        } catch(Exception e) {
+            System.out.println("Caught in Outer Block: " + e);
+        }
+        System.out.println("Program finished.");
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Not eligible
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Write a program that implements <strong>Nested try statements</strong>. Also, create a custom method that uses <code>throws</code> to delegate exception handling to the caller and uses <code>throw</code> to validate user input (e.g., negative balance in a bank account).</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab18.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab20.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

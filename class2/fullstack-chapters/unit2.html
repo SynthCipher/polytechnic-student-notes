@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2: Front-End Design | GPC LEH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="../../assets/logo1.png">
+    <style>
+        .study-guide-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .guide-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .guide-subtitle {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-text {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+        }
+
+        .viva-card {
+            background: var(--surface);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 4rem;
+        }
+
+        .viva-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .viva-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .viva-item:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--glass-border);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Overview</a>
+            <h1>Unit 2: <br><span style="color: var(--secondary);">Front-End Design</span></h1>
+            <p class="subtitle">Complete Study Material with Live Interactive Examples</p>
+        </div>
+    </header>
+
+    <main class="section-container">
+        <!-- Table of Contents -->
+        <div class="study-guide-section"
+            style="padding: 1.5rem; margin-bottom: 2rem; background: rgba(99, 102, 241, 0.05);">
+            <h3 style="color: var(--secondary); margin-bottom: 0.75rem;"><i class="fas fa-list-ul"></i> Topics in this
+                Unit:</h3>
+            <ul style="display: flex; gap: 1.5rem; flex-wrap: wrap; list-style: none; padding: 0; font-weight: 500;">
+                <li><a href="#html5" style="color: var(--primary); text-decoration: none;">2.1 HTML5</a></li>
+                <li><a href="#css" style="color: var(--primary); text-decoration: none;">2.2 CSS Basics</a></li>
+                <li><a href="#javascript" style="color: var(--primary); text-decoration: none;">2.3 JavaScript</a></li>
+                <li><a href="#bootstrap" style="color: var(--primary); text-decoration: none;">2.4 Bootstrap</a></li>
+            </ul>
+        </div>
+
+        <!-- 2.1 HTML5 -->
+        <div id="html5" class="study-guide-section">
+            <h1 class="guide-title">2.1 HTML5</h1>
+            <p class="content-text">HTML5 is the latest version of HTML. It is used to create the structure of webpages.
+            </p>
+
+            <h2 class="guide-subtitle"><i class="fab fa-html5"></i> 2.1.1 Basic Structure of an HTML Document</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>HTML Structure</span></div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;This is my webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Explanation</span></div>
+                    <div style="padding: 1.5rem; color: var(--text-muted);">
+                        <ul style="line-height: 1.8;">
+                            <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser that this is an HTML5 document.
+                            </li>
+                            <li><code>&lt;html&gt;</code> is the root tag.</li>
+                            <li><code>&lt;head&gt;</code> contains title and other information.</li>
+                            <li><code>&lt;body&gt;</code> contains visible content.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-code"></i> 2.1.2 HTML Elements and Tags</h2>
+            <p class="content-text">An HTML element consists of: <strong>Opening tag, Content, Closing tag</strong>.</p>
+
+            <div class="highlight-box">
+                <strong>Example:</strong> <code>&lt;p&gt;Hello World&lt;/p&gt;</code><br><br>
+                Here:<br>
+                &bull; <code>&lt;p&gt;</code> = opening tag<br>
+                &bull; <code>Hello World</code> = content<br>
+                &bull; <code>&lt;/p&gt;</code> = closing tag
+            </div>
+
+            <p class="content-text">Some tags do not need closing tags. Example: <code>&lt;br&gt;</code>,
+                <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>
+            </p>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-heading"></i> 2.1.3 Headings, Paragraphs, Text Formatting</h2>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Headings and Formatting</span></div>
+                    <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Bold&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Italic&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Underline&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Highlighted&lt;/mark&gt;&lt;/p&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif'><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><p>This is a paragraph.</p><p><b>Bold</b></p><p><i>Italic</i></p><p><u>Underline</u></p><p><mark>Highlighted</mark></p></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-list"></i> 2.1.4 Lists</h2>
+            <p class="content-text">There are 3 types of lists in HTML.</p>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>HTML Lists</span></div>
+                    <pre><code>&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Mango&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Red&lt;/li&gt;
+    &lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Description List&lt;/h3&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Used to create structure&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif'><h3>Ordered List</h3><ol><li>Apple</li><li>Mango</li></ol><h3>Unordered List</h3><ul><li>Red</li><li>Blue</li></ul><h3>Description List</h3><dl><dt>HTML</dt><dd>Used to create structure</dd></dl></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-link"></i> 2.1.5 Links and Images</h2>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Links & Images</span></div>
+                    <pre><code>&lt;!-- Link Example --&gt;
+&lt;a href="https://onela.in"&gt;jigmt dorjey&lt;/a&gt;
+
+&lt;!-- Image Example showing the alt attribute --&gt;
+&lt;img src="../../assets/logo.png" 
+     alt="GPC Leh Logo" width="200"&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif'><a href='https://onela.in' target='_blank' style='color:blue; display:block; margin-bottom:15px;'>jigmt dorjey</a><img src='../../assets/logo.png' alt='GPC Leh Logo' width='200'></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-table"></i> 2.1.6 HTML Forms and Tables</h2>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Forms & Tables</span></div>
+                    <pre><code>&lt;!-- Form Example --&gt;
+&lt;form&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" required placeholder="Enter email"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="pwd"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="pwd" required&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Register"&gt;
+&lt;/form&gt;
+
+&lt;br&gt;
+
+&lt;!-- Table Example --&gt;
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Course&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;jigmat&lt;/td&gt;
+            &lt;td&gt;Btech Cse&lt;/td&gt;
+            &lt;td&gt;21&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Stenzin&lt;/td&gt;
+            &lt;td&gt;Btech Cse&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif'><form onsubmit='event.preventDefault()'><label for='email'>Email:</label> <input type='email' id='email' required placeholder='Enter email'><br><br><label for='pwd'>Password:</label> <input type='password' id='pwd' required><br><br><input type='submit' value='Register'></form><br><table border='1' style='border-collapse:collapse; width:100%; text-align:left;'><thead><tr style='background:#f3f4f6;'><th style='padding:8px'>Name</th><th style='padding:8px'>Course</th><th style='padding:8px'>Age</th></tr></thead><tbody><tr><td style='padding:8px'>jigmat</td><td style='padding:8px'>Btech Cse</td><td style='padding:8px'>21</td></tr><tr><td style='padding:8px'>stenzin</td><td style='padding:8px'>Btech Cse</td><td style='padding:8px'>22</td></tr></tbody></table></body>"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2.2 CSS Basics -->
+        <div id="css" class="study-guide-section">
+            <h1 class="guide-title">2.2 CSS Basics</h1>
+            <p class="content-text">CSS stands for Cascading Style Sheets. It is used to style webpages.</p>
+
+            <h2 class="guide-subtitle"><i class="fab fa-css3-alt"></i> 2.2.1 Introduction to CSS</h2>
+            <p class="content-text">CSS controls: Colors, Fonts, Spacing, and Layout.</p>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-file-code"></i> 2.2.2 Inline, Internal and External CSS</h2>
+            <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8;">
+                <li><strong>Inline CSS:</strong> Written inside the tag.
+                    <code>&lt;p style="color:red;"&gt;Hello&lt;/p&gt;</code>
+                </li>
+                <li><strong>Internal CSS:</strong> Written inside <code>&lt;style&gt;</code> tag in the head.</li>
+                <li><strong>External CSS:</strong> Written in a separate <code>.css</code> file.
+                    <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-mouse-pointer"></i> 2.2.3 CSS Selectors</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Selectors</span></div>
+                    <pre><code>&lt;style&gt;
+/* Element Selector */
+p { color: red; }
+
+/* Class Selector */
+.highlight { color: blue; }
+
+/* ID Selector */
+#title { color: green; }
+&lt;/style&gt;
+
+&lt;p&gt;Normal text&lt;/p&gt;
+&lt;p class="highlight"&gt;Class styled&lt;/p&gt;
+&lt;h1 id="title"&gt;ID styled&lt;/h1&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<style>p{color:red; font-family:sans-serif;} .highlight{color:blue;} #title{color:green; font-family:sans-serif;}</style><body><p>Normal text</p><p class='highlight'>Class styled</p><h1 id='title'>ID styled</h1></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-box"></i> 2.2.5 Box Model</h2>
+            <p class="content-text">Every HTML element is like a box. The box model has 4 parts: Content, Padding,
+                Border, Margin.</p>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Box Model Code</span></div>
+                    <pre><code>&lt;style&gt;
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    border: 5px solid red;
+    margin: 30px;
+}
+&lt;/style&gt;
+
+&lt;div class="box"&gt;Content goes here&lt;/div&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<style>.box { background-color: lightblue; padding: 20px; border: 5px solid red; margin: 30px; font-family:sans-serif; }</style><body><div class='box'>Content goes here</div></body>"></iframe>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-layer-group"></i> 2.2.7 CSS Display and Positioning</h2>
+            <ul style="margin-left: 2rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8;">
+                <li><strong>display: block</strong> - Block elements take full width (e.g., <code>&lt;div&gt;</code>,
+                    <code>&lt;p&gt;</code>).
+                </li>
+                <li><strong>display: inline</strong> - Inline elements take only needed width (e.g.,
+                    <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).
+                </li>
+                <li><strong>display: inline-block</strong> - Works like inline but width and height can be set.</li>
+            </ul>
+        </div>
+
+        <!-- 2.3 JavaScript -->
+        <div id="javascript" class="study-guide-section">
+            <h1 class="guide-title">2.3 JavaScript</h1>
+            <p class="content-text">JavaScript is used to make webpages interactive.</p>
+
+            <h2 class="guide-subtitle"><i class="fab fa-js"></i> 2.3.1 Introduction</h2>
+            <p class="content-text">JavaScript can: Show messages, Change webpage text, Validate forms, Respond to user
+                actions.</p>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-calculator"></i> 2.3.2 Variables, Operators, Conditions, Loops
+            </h2>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>JS Basics Code</span></div>
+                    <pre><code class="language-javascript">let name = "Ali";
+let age = 20;
+
+let sum = 5 + 3;
+
+if(age >= 18) {
+    console.log("Adult");
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Console Output</span></div>
+                    <div
+                        style="padding: 1.5rem; background: #1e1e1e; color: #d4d4d4; font-family: monospace; border-radius: 0 0 1rem 1rem;">
+                        > Adult<br>
+                        > 1<br>
+                        > 2<br>
+                        > 3<br>
+                        > 4<br>
+                        > 5
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2 class="guide-subtitle"><i class="fas fa-bolt"></i> 2.3.4 DOM Manipulation</h2>
+            <p class="content-text">DOM means Document Object Model. JavaScript can change HTML elements.</p>
+
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>DOM Update</span></div>
+                    <pre><code>&lt;p id="msg"&gt;Hello&lt;/p&gt;
+&lt;button onclick="changeText()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function changeText() {
+    document.getElementById("msg").innerHTML = "Welcome";
+}
+&lt;/script&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Rendered Result</span></div>
+                    <iframe
+                        srcdoc="<body style='font-family:sans-serif; text-align:center; padding-top:20px;'><p id='msg' style='font-size:24px; font-weight:bold;'>Hello</p><button style='padding:10px 20px; background:#6366f1; color:white; border:none; border-radius:5px; cursor:pointer;' onclick='document.getElementById(\"
+                        msg\").innerHTML=\"Welcome\"'>Click Me</button>
+</body>"></iframe>
+</div>
+</div>
+
+<hr>
+
+<h2 class="guide-subtitle"><i class="fas fa-check-circle"></i> 2.3.6 Client Side Form Validation</h2>
+
+<div class="split-view">
+    <div class="code-panel">
+        <div class="panel-header"><span>Form Validation</span></div>
+        <pre><code>&lt;form onsubmit="return validate()"&gt;
+    &lt;input type="text" id="name" placeholder="Enter Name"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+function validate() {
+    let name = document.getElementById("name").value;
+    if(name == "") {
+        alert("Name cannot be empty");
+        return false;
+    }
+    alert("Success!");
+    return false; // Prevents actual submission for demo
+}
+&lt;/script&gt;</code></pre>
+    </div>
+    <div class="preview-panel">
+        <div class="panel-header"><span>Rendered Result</span></div>
+        <iframe
+            srcdoc="<body style='font-family:sans-serif; padding:20px;'><form onsubmit='var n=document.getElementById(\"
+            name\").value; if(n==\"\"){alert(\"Name cannot be empty\");}else{alert(\"Success!\");} return false;'><input
+                type='text' id='name' placeholder='Enter Name' style='padding:8px; margin-bottom:10px;'><br><input
+                type='submit' style='padding:8px 15px; background:#10b981; color:white; border:none; cursor:pointer;'>
+            </form>
+            </body>"></iframe>
+    </div>
+</div>
+</div>
+
+<!-- 2.4 Bootstrap -->
+<div id="bootstrap" class="study-guide-section">
+    <h1 class="guide-title">2.4 Bootstrap (Responsive Design)</h1>
+    <p class="content-text">Bootstrap is a CSS framework. It helps create responsive websites quickly by providing
+        ready-made CSS classes, buttons, forms, and grid systems.</p>
+
+    <h2 class="guide-subtitle"><i class="fas fa-border-all"></i> 2.4.2 Grid Layout in Bootstrap</h2>
+    <p class="content-text">Bootstrap uses: <code>container</code>, <code>row</code>, and <code>col</code>.</p>
+
+    <div class="split-view">
+        <div class="code-panel">
+            <div class="panel-header"><span>Bootstrap Grid</span></div>
+            <pre><code>&lt;!-- Include Bootstrap CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/.../bootstrap.min.css"&gt;
+
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6 bg-primary text-white p-3"&gt;Left&lt;/div&gt;
+        &lt;div class="col-6 bg-success text-white p-3"&gt;Right&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="preview-panel">
+            <div class="panel-header"><span>Rendered Result</span></div>
+            <iframe
+                srcdoc="<head><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'></head><body style='padding:20px;'><div class='container'><div class='row'><div class='col-6 bg-primary text-white p-3 text-center'>Left</div><div class='col-6 bg-success text-white p-3 text-center'>Right</div></div></div></body>"></iframe>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="guide-subtitle"><i class="fas fa-toggle-on"></i> 2.4.3 Bootstrap Buttons, Forms, Navbars</h2>
+
+    <div class="split-view">
+        <div class="code-panel">
+            <div class="panel-header"><span>Bootstrap Components</span></div>
+            <pre><code>&lt;!-- Buttons --&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Form --&gt;
+&lt;input type="text" class="form-control mt-3" 
+       placeholder="Enter Name"&gt;</code></pre>
+        </div>
+        <div class="preview-panel">
+            <div class="panel-header"><span>Rendered Result</span></div>
+            <iframe
+                srcdoc="<head><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'></head><body style='padding:20px;'><button class='btn btn-primary me-2'>Primary</button><button class='btn btn-success'>Success</button><input type='text' class='form-control mt-3' placeholder='Enter Name'></body>"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Revision -->
+<div class="revision-card"
+    style="background: rgba(16, 185, 129, 0.05); border: 1px solid #10b981; border-radius: 1.5rem; padding: 2.5rem; margin-bottom: 3rem;">
+    <h2 style="color: #10b981; margin-bottom: 1.5rem;"><i class="fas fa-check-double"></i> Quick Revision</h2>
+    <ul style="list-style: disc; padding-left: 2rem; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+        <li>HTML creates structure</li>
+        <li>CSS gives style</li>
+        <li>JavaScript gives interaction</li>
+        <li>Bootstrap helps create responsive websites</li>
+        <li>CSS selectors select elements</li>
+        <li>Box model has content, padding, border, margin</li>
+        <li>JavaScript functions can be reused</li>
+        <li>DOM manipulation changes webpage content</li>
+    </ul>
+</div>
+
+<!-- Viva -->
+<div class="viva-card">
+    <h2 class="guide-title" style="border-color: var(--secondary); color: var(--secondary);">Viva Questions
+    </h2>
+    <ul class="viva-list">
+        <li class="viva-item">1. What is HTML5?</li>
+        <li class="viva-item">2. What is the use of CSS?</li>
+        <li class="viva-item">3. What is the difference between inline, internal and external CSS?</li>
+        <li class="viva-item">4. What is a CSS selector?</li>
+        <li class="viva-item">5. What is the CSS box model?</li>
+        <li class="viva-item">6. What is JavaScript?</li>
+        <li class="viva-item">7. What is a variable in JavaScript?</li>
+        <li class="viva-item">8. What is DOM manipulation?</li>
+        <li class="viva-item">9. What is Bootstrap?</li>
+        <li class="viva-item">10. What is the use of Bootstrap grid system?</li>
+        <li class="viva-item">11. What is the difference between block and inline elements?</li>
+        <li class="viva-item">12. What is client-side validation?</li>
+    </ul>
+</div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+    </div>
+</footer>
+</body>
+
+</html>

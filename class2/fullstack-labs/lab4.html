@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 04 - Form Validation</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 04</p>
+            <h1>Form Validation (JS)</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Form Validation</strong> means checking if the user filled the form correctly (e.g., Is the email real? Is the password long enough?). We use JavaScript to do this before the data is sent.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a security guard at a gate. He checks if you have an ID card and if you are wearing a mask before letting you in.
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code & Live Preview</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: forms.html</span></div>
+                    <pre><code>&lt;script&gt;
+function validate() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let age = document.getElementById("age").value;
+  let phone = document.getElementById("phone").value;
+  let pass = document.getElementById("pass").value;
+
+  if(name == "" || email == "" || age == "" || 
+     phone == "" || pass == "") {
+      alert("All fields are required!");
+      return false;
+  }
+  if(pass.length < 6) {
+      alert("Password must be 6 characters!");
+      return false;
+  }
+  alert("Validation Successful!");
+  return true;
+}
+&lt;/script&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Live Preview</span></div>
+                    <iframe srcdoc="<body style='font-family:sans-serif; padding:20px;'><form onsubmit='alert(\"Validated!\"); return false;'><input placeholder='Full Name' style='display:block; width:100%; margin-bottom:10px; padding:8px;'><input placeholder='Email' type='email' style='display:block; width:100%; margin-bottom:10px; padding:8px;'><input placeholder='Age' type='number' style='display:block; width:100%; margin-bottom:10px; padding:8px;'><input placeholder='Phone' style='display:block; width:100%; margin-bottom:10px; padding:8px;'><input placeholder='Password' type='password' style='display:block; width:100%; margin-bottom:10px; padding:8px;'><select style='display:block; width:100%; margin-bottom:10px; padding:8px;'><option>Select Course</option><option>CSE</option><option>Civil</option></select><button style='background:#6366f1; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;'>Register</button></form></body>"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab3.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab5.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Add 2 more fields: <strong>City</strong> and <strong>Zip Code</strong>. Add a rule that the Zip Code must be exactly 6 numbers long.</p>
+        </section>
+    </div>
+</body>
+</html>

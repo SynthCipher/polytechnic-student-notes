@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Program 14: Pointers | GPC LEH</title>
+    <link rel='icon' type='image/png' href='../../assets/logo1.png'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+            <nav class="navbar">
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/logo.png" alt="Logo">
+            <span>GPC LEH</span>
+        </a>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <a href="../c-lab.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Lab</a>
+            <h1>Memory <br><span style="color: var(--primary);">Address</span></h1>
+            <p class="subtitle">Practical 14: Direct memory access using pointers.</p>
+        </div>
+    </header>
+    <main class="section-container">
+        <div class="note-card">
+            <h3>Definition</h3>
+            <p>Pointers are special variables that do not store regular values like 10 or 20. Instead, they store the <strong>Memory Address</strong> of another variable. They are like a GPS for your computer's memory. Pointers are incredibly powerful because they allow you to directly access and modify data in the computer's RAM, which makes programs run faster.</p>
+        </div>
+
+        <div class="note-card" style="border-left-color: var(--primary); background: rgba(99, 102, 241, 0.05);">
+            <h3><i class="fas fa-lightbulb"></i> Real-Life Analogy</h3>
+            <p>A pointer is exactly like a <strong>Treasure Map</strong>. The map itself is not the treasure, but it tells you exactly WHERE the treasure is buried in the ground (Memory). If you follow the address on the map (dereferencing), you will find the actual treasure (the value).</p>
+        </div>
+        
+        <h3 class="section-title">Program Example</h3>
+        <div class="code-block">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n = 100;
+    int *ptr = &n;
+    printf("Value of n: %d\n", n);
+    printf("Address of n: %p\n", (void*)&n);
+    printf("Value using pointer: %d\n", *ptr);
+    return 0;
+}
+</pre>
+        </div>
+
+        <h3 class="section-title">Expected Output</h3>
+        <div class="output-box"><pre>Value of n: 100
+Address of n: 0x7ffd...
+Value using pointer: 100</pre></div>
+
+        <div class="homework-card">
+            <h3><i class="fas fa-edit"></i> Homework / Practice Question</h3>
+            <p>Create two variables, use pointers to add them together, and print the result using only the pointer variables.</p>
+        </div>
+
+        <h3 class="section-title">How to Compile & Run</h3>
+        <div class="compiler-grid">
+            <div class="compiler-box">
+                <h4><i class="fas fa-terminal"></i> Modern GCC (Shortcut)</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Press <strong>F11</strong> to Compile and Run.</li>
+                </ul>
+            </div>
+            <div class="compiler-box">
+                <h4><i class="fas fa-desktop"></i> Turbo C++</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>Press Alt + F9 then Ctrl + F9</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <a href="../../index.html" class="floating-home"><i class="fas fa-home"></i></a>
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GPC LEH | Design by Jigmat and <a href="https://onela.in" target="_blank">onela.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

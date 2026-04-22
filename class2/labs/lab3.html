@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 03 - Labelled Loops</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 03</p>
+            <h1>Labelled Loops</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>loop</strong> repeats a task. A <strong>Labelled Loop</strong> allows us to give a name to a loop so we can stop a "Big Task" completely from inside a "Small Task".</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Imagine searching for a specific toy in 5 different boxes. As soon as you find the toy in Box 2, you stop searching Box 2 AND you stop looking at the other 3 boxes too.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: LabelledLoop.java
+public class LabelledLoop {
+    public static void main(String[] args) {
+        // Label for the outer loop
+        outer: 
+        for(int i=1; i<=3; i++) {
+            for(int j=1; j<=3; j++) {
+                if(i==2 && j==2) {
+                    System.out.println("Breaking outer loop at i=2, j=2");
+                    break outer; 
+                }
+                System.out.println("i=" + i + ", j=" + j);
+            }
+        }
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                i=1, j=1<br>
+                i=1, j=2<br>
+                i=1, j=3<br>
+                i=2, j=1
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 2 programs to explore labelled loops:<br>
+            1. Use a labelled loop to find the first prime number in a range that also contains specific unwanted factors.<br>
+            2. Search for a specific value in a 2D matrix and break the entire search process using a label once found.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab2.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab4.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

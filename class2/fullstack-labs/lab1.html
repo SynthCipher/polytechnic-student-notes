@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FS Practical 01 - All HTML Tags</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tag-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .tag-table th, .tag-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .tag-table th { background: var(--primary); color: white; }
+        code { color: var(--secondary); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <a href="../fullstack.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--secondary); font-weight: 700;">FULL STACK PRACTICAL 01</p>
+            <h1>Demonstration of All HTML Tags</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>HTML (HyperText Markup Language) is used to create the structure of a webpage. Think of it as the "Bones" of a building. Each tag has a special job, like showing a heading, a list, or a table.</p>
+                <div class="real-life-box">
+                    <strong>Real-life Example:</strong> Like a school notebook. You have a <strong>Title</strong> (Heading), <strong>Paragraphs</strong> (Text), <strong>Bullet points</strong> (Lists), and <strong>Forms</strong> (Registration section).
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Tag Guide (How they work)</h2>
+            <table class="tag-table">
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Work (Function)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>&lt;h1&gt; - &lt;h6&gt;</code></td><td>Used for Headings (h1 is biggest, h6 is smallest).</td></tr>
+                    <tr><td><code>&lt;p&gt;</code></td><td>Used for writing paragraphs of text.</td></tr>
+                    <tr><td><code>&lt;b&gt;, &lt;i&gt;, &lt;u&gt;</code></td><td>Formatting: Bold, Italic, and Underline.</td></tr>
+                    <tr><td><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></td><td>Unordered (bullets) and Ordered (1,2,3) lists.</td></tr>
+                    <tr><td><code>&lt;a&gt;</code></td><td>Creates a Link to another page.</td></tr>
+                    <tr><td><code>&lt;img&gt;</code></td><td>Displays an Image.</td></tr>
+                    <tr><td><code>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</code></td><td>Used to show data in rows and columns.</td></tr>
+                    <tr><td><code>&lt;form&gt;, &lt;input&gt;</code></td><td>Used to take input from the user (like name, age).</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Complete Code Demo</h2>
+            <div class="split-view">
+                <div class="code-panel">
+                    <div class="panel-header"><span>Filename: faculty_profile.html</span></div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Jigmat Dorjey | Faculty Profile&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- 1. Semantic Headers --&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Faculty Biography&lt;/h1&gt;
+    &lt;h2&gt;Jigmat Dorjey&lt;/h2&gt;
+    &lt;p&gt;&lt;mark&gt;Lecturer in CSE Department&lt;/mark&gt;&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;!-- 2. Formatting Tags --&gt;
+  &lt;p&gt;
+    &lt;strong&gt;Expertise:&lt;/strong&gt; Full Stack Development &lt;em&gt;(MERN)&lt;/em&gt;&lt;br&gt;
+    &lt;small&gt;Office Hours: 10:00 AM - 4:00 PM&lt;/small&gt;&lt;br&gt;
+    Formula Example: H&lt;sub&gt;2&lt;/sub&gt;O or E=mc&lt;sup&gt;2&lt;/sup&gt;
+  &lt;/p&gt;
+
+  &lt;!-- 3. Multimedia --&gt;
+  &lt;img src="../../assets/jigmat.jpg" alt="Profile" width="100"&gt;
+  &lt;br&gt;
+  &lt;a href="https://jigmatdorjey.onela.in" target="_blank"&gt;Official Website&lt;/a&gt;
+
+  &lt;!-- 4. Lists (Nested) --&gt;
+  &lt;h3&gt;Subjects Taught&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Web Technology
+      &lt;ul&gt;
+        &lt;li&gt;HTML/CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Java Programming&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- 5. Interactive Elements --&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Click to see Research Interests&lt;/summary&gt;
+    &lt;p&gt;Artificial Intelligence, Web Security, and Data Science.&lt;/p&gt;
+  &lt;/details&gt;
+
+  &lt;!-- 6. Forms (Advanced) --&gt;
+  &lt;h3&gt;Student Query Form&lt;/h3&gt;
+  &lt;form&gt;
+    &lt;label&gt;Student Name:&lt;/label&gt; &lt;input type="text"&gt;&lt;br&gt;
+    &lt;label&gt;Gender:&lt;/label&gt; 
+    &lt;input type="radio" name="g"&gt; M &lt;input type="radio" name="g"&gt; F&lt;br&gt;
+    &lt;label&gt;Department:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;CSE&lt;/option&gt;
+      &lt;option&gt;Civil&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;
+    &lt;label&gt;DOB:&lt;/label&gt; &lt;input type="date"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit Query"&gt;
+  &lt;/form&gt;
+
+  &lt;!-- 7. Quotes --&gt;
+  &lt;blockquote&gt;"Education is the most powerful weapon."&lt;/blockquote&gt;
+  &lt;address&gt;Govt. Polytechnic, Leh, Ladakh&lt;/address&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <div class="preview-panel">
+                    <div class="panel-header"><span>Live Preview</span></div>
+                    <iframe srcdoc="<body style='font-family:sans-serif; padding:15px; line-height:1.3;'><h1>Faculty Biography</h1><h2>Jigmat Dorjey</h2><p><mark>Lecturer in CSE Department</mark></p><p><strong>Expertise:</strong> Full Stack <em>(MERN)</em><br><small>10 AM - 4 PM</small></p><img src='../../assets/jigmat.jpg' width='60'><br><a href='#' target='_blank'>Official Website</a><h3>Subjects Taught</h3><ol><li>Web Technology<ul><li>HTML/CSS</li></ul></li></ol><details><summary>Research Interests</summary><p>AI & Data Science</p></details><h3>Student Form</h3><form>Name: <input type='text' style='width:80%;'><br>Gender: <input type='radio'>M <input type='radio'>F<br>Dept: <select><option>CSE</option></select><br><input type='submit' style='background:#6366f1; color:white; border:none; padding:5px 10px; border-radius:5px; margin-top:5px;'></form><blockquote>'Education is the most powerful weapon.'</blockquote><address>Govt. Polytechnic, Leh</address></body>"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title"><i class="fas fa-edit"></i> Lab Assignment</h2>
+            <p class="concept-text">Create a "Bio-Data" page for yourself. 
+            <br>1. Use <code>&lt;h1&gt;</code> for your name. 
+            <br>2. Use a <code>&lt;table&gt;</code> to show your school and college names. 
+            <br>3. Add an <code>&lt;ol&gt;</code> list of your 3 best skills.</p>
+        </section>
+
+        <div class="nav-controls">
+            <span></span>
+            <a href="lab2.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

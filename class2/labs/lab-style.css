@@ -1,0 +1,156 @@
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary: #06b6d4;
+    --accent: #f43f5e;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #334155;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+
+.lab-container {
+    max-width: 1000px;
+    margin: 80px auto 50px;
+    padding: 0 2rem;
+}
+
+.lab-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1.5rem;
+}
+
+.lab-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.lab-section {
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--secondary);
+}
+
+.concept-text {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+pre {
+    background: #0f172a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow-x: auto;
+    border-left: 4px solid var(--primary);
+    margin-top: 1rem;
+}
+
+code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.95rem;
+    color: #e0e7ff;
+}
+
+.output-box {
+    background: #000;
+    color: #10b981;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    font-family: 'Fira Code', monospace;
+    margin-top: 0.75rem;
+    border: 1px solid #1e293b;
+}
+
+.assignment-box {
+    border-left: 4px solid var(--accent);
+    background: rgba(244, 63, 94, 0.05);
+    padding: 2rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.btn-back {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.btn-back:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateX(-5px);
+}
+
+.nav-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .btn-back { top: 1rem; left: 1rem; padding: 0.6rem 1rem; font-size: 0.85rem; }
+    .lab-header h1 { font-size: 1.75rem; }
+    .lab-section { padding: 1.5rem; }
+}

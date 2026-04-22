@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 17 - Partial Interface</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 17</p>
+            <h1>Partial Interface Implementation</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>Sometimes a class follows some rules but cannot follow ALL rules of an interface. Such a class becomes <strong>Abstract</strong>.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> An interface says a "Vehicle" must have a "Brake" and a "Horn". A bicycle has a brake but no horn (it has a bell). So, a bicycle is a <strong>partial implementation</strong> of the vehicle rules.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: PartialInterfaceDemo.java
+interface MyInterface {
+    void method1();
+    void method2();
+}
+
+// This class only implements method1, so it must be abstract
+abstract class PartialImpl implements MyInterface {
+    public void method1() { 
+        System.out.println("Method 1 is implemented here."); 
+    }
+}
+
+class FullImpl extends PartialImpl {
+    public void method2() { 
+        System.out.println("Method 2 is implemented here."); 
+    }
+}
+
+public class PartialInterfaceDemo {
+    public static void main(String[] args) {
+        FullImpl obj = new FullImpl();
+        obj.method1();
+        obj.method2();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Method 1 done<br>
+                Method 2 done
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Write a program that shows the partial implementation of an interface <code>BankOperations</code> which has methods <code>deposit()</code>, <code>withdraw()</code>, and <code>calculateInterest()</code>. Implement only <code>deposit()</code> and <code>withdraw()</code> in an abstract class and the rest in a concrete class.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab16.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab18.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

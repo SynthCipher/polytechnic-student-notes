@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 10 - Constructors</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 10</p>
+            <h1>Constructors in Java</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>A <strong>Constructor</strong> is a special function that runs automatically when an object is created. It is used to give starting values to the object.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> When a new baby is born, the parents immediately give it a name. Giving a name at the time of birth is like a Constructor setting values for a new object.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: ConstructorDemo.java
+class Student {
+    String name;
+    int roll;
+    
+    // Default Constructor
+    Student() {
+        name = "Unknown";
+        roll = 0;
+    }
+    
+    // Parameterized Constructor
+    Student(String n, int r) {
+        name = n;
+        roll = r;
+    }
+    
+    void display() {
+        System.out.println("Student Name: " + name + ", Roll: " + roll);
+    }
+}
+
+public class ConstructorDemo {
+    public static void main(String[] args) {
+        Student s1 = new Student(); // Calls default
+        Student s2 = new Student("John", 101); // Calls parameterized
+        
+        s1.display();
+        s2.display();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                John Doe : 101
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Modify the classes created in previous practical sessions (like Rectangle and Account) to include both default and parameterized constructors. Test them by creating multiple objects with different initial values.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab9.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab11.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 09 - Method Overloading</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 09</p>
+            <h1>Method Overloading</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Method Overloading</strong> means having many methods with the SAME name, but they take different types of data (like numbers or words).</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Think of the word "Cut". You can "Cut" paper with scissors, "Cut" hair with a trimmer, or "Cut" a cake with a knife. The action is called the same (Cut), but the tools are different.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: OverloadingDemo.java
+class Calculator {
+    // Method to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    // Overloaded method to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class OverloadingDemo {
+    public static void main(String[] args) {
+        Calculator cal = new Calculator();
+        System.out.println("Addition of 2 numbers: " + cal.add(10, 20));
+        System.out.println("Addition of 3 numbers: " + cal.add(10, 20, 30));
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Int Addition: 30<br>
+                Double Addition: 35.5
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 4 programs based on method overloading:<br>
+            1. Overload <code>area()</code> method to calculate area of Circle, Rectangle, and Triangle.<br>
+            2. Overload <code>volume()</code> for Sphere and Cube.<br>
+            3. Overload a method to display different types of data (int, string, char).<br>
+            4. Overload a constructor for a student class.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab8.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab10.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

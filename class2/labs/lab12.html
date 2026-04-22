@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 12 - Packages & Visibility</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 12</p>
+            <h1>Packages & Access Modifiers</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>Packages</strong> are like folders for classes. <strong>Visibility Modifiers</strong> (public, private) control who can see or use your code.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Your diary is <strong>private</strong> (only you can see it). Your school textbook is <strong>public</strong> (anyone can read it). Your family photos are <strong>protected</strong> (only your family can see them).</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: VisibilityDemo.java
+class AccessTest {
+    public int publicData = 10;
+    private int privateData = 20;
+    protected int protectedData = 30;
+
+    void showPrivate() {
+        System.out.println("Private Data (accessible inside class): " + privateData);
+    }
+}
+
+public class VisibilityDemo {
+    public static void main(String[] args) {
+        AccessTest obj = new AccessTest();
+        System.out.println("Public Data: " + obj.publicData);
+        System.out.println("Protected Data: " + obj.protectedData);
+        // System.out.println(obj.privateData); // Error: private access
+        obj.showPrivate();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                // No direct output, test by importing in another class
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Develop 2 programs:<br>
+            1. Create a package <code>com.college.math</code> and a class <code>Calculator</code> within it. Import and use it in a different package.<br>
+            2. Test all 4 visibility modifiers by trying to access members from within the same class, same package, and different packages.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab11.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab13.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

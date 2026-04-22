@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 05 - This & Super</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 05</p>
+            <h1>Using 'this' and 'super'</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p><strong>'this'</strong> means "This class" or "Me". <strong>'super'</strong> means "Parent class" or "My Father". We use them to avoid confusion between similar names.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> You have your own shirt (<code>this.shirt</code>), and you might also wear your brother's jacket (<code>super.jacket</code>). Using these words makes it clear whose clothes you are talking about.</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: RectangleBoxDemo.java
+class Rectangle {
+    double l, b;
+    Rectangle(double l, double b) {
+        this.l = l; // 'this' refers to current class variable
+        this.b = b;
+    }
+    void displayArea() {
+        System.out.println("Rectangle Area: " + (l * b));
+    }
+}
+
+class Box extends Rectangle {
+    double h;
+    Box(double l, double b, double h) {
+        super(l, b); // 'super' calls parent constructor
+        this.h = h;
+    }
+    void displayVolume() {
+        System.out.println("Box Volume: " + (l * b * h));
+    }
+}
+
+public class RectangleBoxDemo {
+    public static void main(String[] args) {
+        Box myBox = new Box(10, 5, 5);
+        myBox.displayArea();
+        myBox.displayVolume();
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Area: 50.0<br>
+                Volume: 250.0
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Write a program to create a class <strong>Rectangle</strong> and a subclass <strong>Box</strong>. Calculate the area of the rectangle and the perimeter, then calculate the volume of the box. Use <code>this</code> to initialize current class members and <code>super</code> to initialize inherited members.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab4.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab6.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

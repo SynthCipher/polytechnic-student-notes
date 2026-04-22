@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 18 - Exception Handling</title>
+    <link rel="stylesheet" href="lab-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="../java-oops.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to List</a>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <p style="color: var(--primary); font-weight: 700;">PRACTICAL 18</p>
+            <h1>Try & Multiple Catch Blocks</h1>
+        </header>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Concept</h2>
+            <div class="concept-text">
+                <p>An <strong>Exception</strong> is a mistake or error that happens when the program is running. We use <strong>try-catch</strong> to catch these mistakes so the program does not crash.</p>
+                <p style="margin-top: 10px;"><strong>Real-life Example:</strong> Imagine you are driving a car (try). If a tyre punctures (exception), you use a spare tyre (catch) and continue driving. You don't just leave the car in the middle of the road!</p>
+            </div>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Basic Code Example</h2>
+            <pre><code>// Filename: ExceptionDemo.java
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        try {
+            int a[] = new int[5];
+            // Scenario 1: Division by zero
+            // int result = 30 / 0; 
+            
+            // Scenario 2: Array out of bounds
+            a[10] = 50; 
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero!");
+        } 
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Array index is out of range!");
+        }
+        catch (Exception e) {
+            System.out.println("Some other error occurred.");
+        }
+        System.out.println("Program continues...");
+    }
+}</code></pre>
+        </section>
+
+        <section class="lab-section">
+            <h2 class="section-title"><i class="fas fa-terminal"></i> Expected Output</h2>
+            <div class="output-box">
+                Arithmetic Error!
+            </div>
+        </section>
+
+        <section class="lab-section assignment-box">
+            <h2 class="section-title" style="color: #e76f51;"><i class="fas fa-tasks"></i> Lab Assignment</h2>
+            <p>Write a program to handle exceptions using a try block and multiple catch blocks. Test for <code>ArithmeticException</code>, <code>ArrayIndexOutOfBoundsException</code>, and a general <code>Exception</code> block to catch any other errors.</p>
+        </section>
+
+        <div class="nav-controls">
+            <a href="lab17.html" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="lab19.html" class="nav-btn">Next Practical <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>
