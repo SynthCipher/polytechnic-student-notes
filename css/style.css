@@ -383,10 +383,9 @@ footer {
 /* Split View (Code & Preview) */
 .split-view {
   display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
+  flex-direction: column; /* Stacked layout for full-width visibility */
+  gap: 2rem;
   margin: 2rem 0;
-  min-height: 450px;
 }
 
 @media (max-width: 992px) {
@@ -397,7 +396,9 @@ footer {
 }
 
 .code-panel, .preview-panel {
+  width: 100%;
   flex: 1;
+  min-height: 400px;
   background: var(--surface);
   border: 1px solid var(--glass-border);
   border-radius: 1rem;
@@ -428,10 +429,10 @@ footer {
 
 .preview-panel iframe {
   width: 100%;
-  flex-grow: 1;
+  height: 100%;
   border: none;
   background: white;
-  min-height: 300px;
+  min-height: 600px;
 }
 
 /* Footer */

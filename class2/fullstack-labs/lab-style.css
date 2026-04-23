@@ -75,14 +75,20 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 /* Split View Styling */
 .split-view {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column; /* Stacked layout for full-width visibility */
+    gap: 2rem;
     margin-top: 1.5rem;
-    min-height: 500px;
 }
 
-@media (max-width: 992px) {
-    .split-view { flex-direction: column; }
+.code-panel {
+    min-height: 350px;
 }
+
+.preview-panel {
+    min-height: 650px; /* Larger preview area */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
 
 .code-panel, .preview-panel {
     flex: 1;
@@ -118,7 +124,8 @@ code {
 
 iframe {
     width: 100%;
-    flex-grow: 1;
+    height: 100%;
+    min-height: 600px;
     border: none;
     background: white;
 }
